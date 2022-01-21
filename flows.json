@@ -1,23 +1,9 @@
 [
     {
-        "id": "2500c006.91d75",
+        "id": "ec6d74c6.c4cc58",
         "type": "tab",
-        "label": "Dark Sky",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "1600a05a.fc816",
-        "type": "tab",
-        "label": "Twillo",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "1fb0f65a.416e0a",
-        "type": "tab",
-        "label": "Alerts",
-        "disabled": false,
+        "label": "TTN",
+        "disabled": true,
         "info": ""
     },
     {
@@ -31,20 +17,34 @@
         "id": "524fa936.044d78",
         "type": "tab",
         "label": "MongoDB",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "2500c006.91d75",
+        "type": "tab",
+        "label": "Dark Sky",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "1600a05a.fc816",
+        "type": "tab",
+        "label": "Twillo",
         "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1fb0f65a.416e0a",
+        "type": "tab",
+        "label": "Alerts",
+        "disabled": true,
         "info": ""
     },
     {
         "id": "dd7a06b0.e5b738",
         "type": "tab",
         "label": "UX",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "ec6d74c6.c4cc58",
-        "type": "tab",
-        "label": "TTN",
         "disabled": false,
         "info": ""
     },
@@ -59,13 +59,6 @@
         "id": "171b21f.9e6efde",
         "type": "tab",
         "label": "RainMachine",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "b9ee3f7a.d9595",
-        "type": "tab",
-        "label": "GCP",
         "disabled": false,
         "info": ""
     },
@@ -98,16 +91,9 @@
         "info": ""
     },
     {
-        "id": "f6c0ab56.cd9818",
-        "type": "tab",
-        "label": "nanothings",
-        "disabled": false,
-        "info": ""
-    },
-    {
         "id": "4576b216.7dd43c",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Grafana",
         "disabled": false,
         "info": ""
     },
@@ -149,22 +135,27 @@
         "id": "d211c5e.e794238",
         "type": "mqtt-broker",
         "name": "pines",
-        "broker": "10.0.0.10",
+        "broker": "10.10.10.10",
         "port": "1883",
         "clientid": "",
         "usetls": false,
         "compatmode": false,
+        "protocolVersion": "4",
         "keepalive": "60",
         "cleansession": true,
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": "",
+        "birthMsg": {},
         "closeTopic": "",
         "closeQos": "0",
         "closePayload": "",
+        "closeMsg": {},
         "willTopic": "",
         "willQos": "0",
-        "willPayload": ""
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
     },
     {
         "id": "b03b267.f2a54d8",
@@ -177,11 +168,12 @@
         "id": "b5099f66.a15af",
         "type": "mqtt-broker",
         "name": "zwave",
-        "broker": "10.0.0.100",
+        "broker": "mqtt",
         "port": "1883",
         "clientid": "",
         "usetls": false,
         "compatmode": false,
+        "protocolVersion": 4,
         "keepalive": "60",
         "cleansession": true,
         "birthTopic": "",
@@ -344,7 +336,8 @@
         "database": "zwave",
         "name": "",
         "usetls": false,
-        "tls": ""
+        "tls": "",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "9fd8514d.4e93e",
@@ -355,7 +348,8 @@
         "database": "aTimeSeries",
         "name": "aTimeSeries",
         "usetls": false,
-        "tls": ""
+        "tls": "",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "5059026f.4e2d5c",
@@ -366,7 +360,8 @@
         "database": "ecobee",
         "name": "",
         "usetls": false,
-        "tls": ""
+        "tls": "",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "da295c2b.76a85",
@@ -377,7 +372,8 @@
         "database": "mbox",
         "name": "",
         "usetls": false,
-        "tls": ""
+        "tls": "",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "705e49f4.ec4728",
@@ -392,7 +388,7 @@
         "id": "6f408d8b.005a54",
         "type": "ttn app",
         "appId": "edgewood-radiobridge",
-        "accessKey": "ttn-account-v2.cDmAEd8FveRbmzMDEt9-sz2SBZcNrLuUOJtQE9yZl64",
+        "accessKey": "ttn-account-v2.fh8idfouyyguOc6h8hmb3UbzkoWNql8Nwa69HD_QNBw",
         "discovery": "discovery.thethingsnetwork.org:1900"
     },
     {
@@ -436,7 +432,8 @@
         "database": "darksky",
         "name": "",
         "usetls": false,
-        "tls": "f21111d7.3018c"
+        "tls": "f21111d7.3018c",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "1adb25b4.af776a",
@@ -447,7 +444,8 @@
         "database": "LoRaWAN",
         "name": "",
         "usetls": false,
-        "tls": "f21111d7.3018c"
+        "tls": "f21111d7.3018c",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "d15f51f5.84dab",
@@ -471,7 +469,8 @@
         "database": "fail2ban",
         "name": "",
         "usetls": false,
-        "tls": "d15f51f5.84dab"
+        "tls": "d15f51f5.84dab",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "8be518d1.d9d1c8",
@@ -518,7 +517,8 @@
         "database": "weather",
         "name": "",
         "usetls": false,
-        "tls": "d15f51f5.84dab"
+        "tls": "d15f51f5.84dab",
+        "influxdbVersion": "1.x"
     },
     {
         "id": "e199e3e1.ec71c",
@@ -533,6 +533,64 @@
         "appId": "edgewood-sensecap",
         "accessKey": "ttn-account-v2.k2r6VMBf02helVYk0u0PEDS_KQCQcVDpg2_zk_79fko",
         "discovery": "discovery.thethingsnetwork.org:1900"
+    },
+    {
+        "id": "9e48d781.e8e798",
+        "type": "ttn app",
+        "appId": "edgewood-dragino",
+        "accessKey": "ttn-account-v2.K_GzJbIb3bgzCa9bJp8qew1U85yr8voZjy_boifNBQQ",
+        "discovery": "discovery.thethingsnetwork.org:1900"
+    },
+    {
+        "id": "5010ad6c.df5ca4",
+        "type": "server",
+        "name": "Home Assistant",
+        "version": 1,
+        "legacy": false,
+        "addon": false,
+        "rejectUnauthorizedCerts": false,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true
+    },
+    {
+        "id": "e81e7427.232dd8",
+        "type": "influxdb",
+        "hostname": "influxdb",
+        "port": "8086",
+        "protocol": "http",
+        "database": "homeassistant",
+        "name": "",
+        "usetls": false,
+        "tls": "d15f51f5.84dab",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "87dccc93.0a5e1",
+        "type": "mqtt-broker",
+        "name": "gcp",
+        "broker": "pines.edgewoods.net",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
     },
     {
         "id": "eb7a216f.8a0d4",
@@ -577,6 +635,18 @@
         "type": "inject",
         "z": "2500c006.91d75",
         "name": "Every Hour",
+        "props": [
+            {
+                "p": "payload",
+                "v": "45.1416667,092.3747222",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "weatherapi",
+                "vt": "string"
+            }
+        ],
         "repeat": "3600",
         "crontab": "",
         "once": false,
@@ -869,22 +939,6 @@
         "wires": [
             [
                 "d89c6ebb.cf6c2"
-            ]
-        ]
-    },
-    {
-        "id": "7fc6f955.0873f8",
-        "type": "mqtt in",
-        "z": "1fb0f65a.416e0a",
-        "name": "",
-        "topic": "zwave/#",
-        "qos": "2",
-        "broker": "b5099f66.a15af",
-        "x": 160,
-        "y": 160,
-        "wires": [
-            [
-                "e09faf7a.14f1b"
             ]
         ]
     },
@@ -1944,52 +1998,6 @@
         "wires": []
     },
     {
-        "id": "5550a94b.10b858",
-        "type": "find-my-iphone",
-        "z": "1fb0f65a.416e0a",
-        "x": 340,
-        "y": 520,
-        "wires": [
-            [
-                "e7b4ffef.848a9"
-            ]
-        ]
-    },
-    {
-        "id": "4552417e.cfe2a",
-        "type": "inject",
-        "z": "1fb0f65a.416e0a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 520,
-        "wires": [
-            [
-                "5550a94b.10b858"
-            ]
-        ]
-    },
-    {
-        "id": "e7b4ffef.848a9",
-        "type": "debug",
-        "z": "1fb0f65a.416e0a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "x": 530,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "13b4c363.90a4ad",
         "type": "debug",
         "z": "7a63b42f.d247ec",
@@ -2469,6 +2477,8 @@
         "qos": "2",
         "datatype": "auto",
         "broker": "d211c5e.e794238",
+        "nl": false,
+        "rap": false,
         "x": 170,
         "y": 240,
         "wires": [
@@ -3250,22 +3260,6 @@
         "wires": []
     },
     {
-        "id": "bcbafbbc.478ce8",
-        "type": "mqtt in",
-        "z": "d75475bd.f0fa48",
-        "name": "",
-        "topic": "zwave/notification",
-        "qos": "2",
-        "broker": "b5099f66.a15af",
-        "x": 210,
-        "y": 800,
-        "wires": [
-            [
-                "ba459182.879bd"
-            ]
-        ]
-    },
-    {
         "id": "ba459182.879bd",
         "type": "json",
         "z": "d75475bd.f0fa48",
@@ -3667,8 +3661,8 @@
         "app": "6f408d8b.005a54",
         "dev_id": "",
         "event": "#",
-        "x": 160,
-        "y": 720,
+        "x": 180,
+        "y": 940,
         "wires": [
             [
                 "dd20ef4a.051bf"
@@ -3686,8 +3680,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 330,
-        "y": 720,
+        "x": 350,
+        "y": 940,
         "wires": []
     },
     {
@@ -3698,8 +3692,8 @@
         "app": "6f408d8b.005a54",
         "dev_id": "",
         "field": "",
-        "x": 160,
-        "y": 360,
+        "x": 180,
+        "y": 560,
         "wires": [
             [
                 "4a66209c.69761",
@@ -3763,8 +3757,8 @@
         "func": "//function Decoder(bytes, port) {\n  // Decode an uplink message from a buffer\n  // (array) of bytes to an object of fields.\n//  var decoded = {};\n\n  // if (port === 1) decoded.led = bytes[0];\n\n//  return decoded;\n//}\n\n\n//Decode = function(fPort, bytes) {\n\nfunction Decoder(bytes, port) {\nvar return_object = {};\nvar event_array = [];\nreturn_object.port = port;\nreturn_object.radio_bridge_protocol_version = bytes[0] >> 4; // first nibble is always 0x1 for Radio Bridge as that is the protocol version\nreturn_object.radio_bridge_packet_count = bytes[0] & 0xF; // second nibble is the packet count (should go up by 1 each time an uplink is sent...even if the uplink is sent 6 times it should increment 6 times)\nvar message_type = bytes[1]; // Radio Bridge differentiates sensors and other common messages based on this byte\nreturn_object.message_type = message_type;\n switch(message_type) {\n    case 0x03: {\n if (bytes.length == 3) {\n        var magnet_present_event = {};\n var magnet_sensor_state = Boolean(bytes[2]); // 0x01 means the magnet is NOT present, 0x00 means there IS a magnet\n magnet_present_event.n = \"magnet_present\";\n magnet_present_event.vb = !magnet_sensor_state;\n event_array.push(magnet_present_event);\n }\n break;\n } // end case 0x03 (door/window sensor)\n    case 0x0A: {\n      if (bytes.length == 4) {\n         var tilt_event = {};\n         var tilt_sensor_state = Boolean(bytes[2]); //\n      }\n      break;\n    }\n    case 0x00: { // 0x00 is the reset message (5 bytes)\n         if (bytes.length == 8) {\n         /* Not using right now....should use later\n         var sensor_type_codes = {\n             0x00: \"undefined sensor_type_code\",\n             0x01: \"Door/Window\",\n             0x02: \"Door/Window High Security\",\n             0x03: \"Contact\",\n             0x04: \"Temperature No-Probe\",\n             0x05: \"Temperature External Probe\",\n             0x06: \"Single Push Button\",\n             0x07: \"Dual Push Button\",\n             0x0E: \"Air Temperature and Humidity\",\n              0x0A: \"Tilt Sensor\",\n         };\n         */\n         var reset_event = {};\n         reset_event.n = \"device_reset_event\";\n         reset_event.vd = '' + bytes;\n         /* These are not used right now, but could be used in the future\n         var sensor_type_code = bytes[2];\n         var hardware_version = bytes[3];\n         var firmware_version_major = bytes[4];\n         var firmware_version_minor = bytes[5];\n         var reset_code_major = bytes[6];\n         var reset_code_minor = bytes[7];\n         */\n         event_array.push(reset_event);\n         }\n         break;\n     } // end case 0x00\n     case 0x01: { // 0x01 is the status payload for supervisory messages\n         if (bytes.length == 5) {\n         var supervisory_error_event = {};\n         var supervisory_error_codes = bytes[2];//TODO make enums for this\n         supervisory_error_event.n = \"supervisory_error_codes\";\n         supervisory_error_event.vd = '' + supervisory_error_codes; // TODO make different events for this\n         event_array.push(supervisory_error_event);\n    \n         var supervisory_sensor_state = bytes[3];\n         var supervisory_sensor_state_event = {};\n         supervisory_sensor_state_event.n = \"supervisory_sensor_state\";\n         supervisory_sensor_state_event.v = supervisory_sensor_state; // TODO make different events for this\n         event_array.push(supervisory_sensor_state_event);\n    \n         var battery_event = {};\n         var battery_voltage_integer = bytes[4] >>> 4; // integer is highest 4 bits\n         var battery_voltage_decimal = (bytes[4] & 0x0F)/10; // decimal is lowest 4 bits\n         battery_event.v = battery_voltage_integer + battery_voltage_decimal;\n         battery_event.n = \"battery_voltage\";\n         battery_event.u = \"V\";\n         event_array.push(battery_event);\n         }\n         break;\n     } // end case 0x01\n     case 0x02: { // 0x02 is the status payload for tamper event messages\n         if (bytes.length == 3) {\n         var tamper_switch_event = {};\n         var tamper_switch_closed = Boolean(bytes[2]); // closed means the device is in a secure state. Opened means the case was removed or the sensor was removed from the wall\n         tamper_switch_event.n = \"tamper_switch_closed\";\n         tamper_switch_event.vb = tamper_switch_closed; // 0x00 = tamper switch released, 0x01 = tamper switch pressed\n         event_array.push(tamper_switch_event);\n         }\n         break;\n     } // end case 0x02\n     case 0xfd: { // 0xfd is the test message\n         var magnet_event = {}; \n         magnet_event.n = \"magnet_device_test\";\n         magnet_event.v = bytes[2]; // some sensors have more than one byte for status\n         event_array.push(magnet_event);\n         break;\n     } // end case 0xfd\n     default: {\n         break;\n     } // end default case\n     } // end switch(message_type)\n     if (event_array.length === 0) {\n     var unknown_event = {};\n     unknown_event.n = \"unknown_event\";\n     unknown_event.vd = '' + bytes;\n     event_array.push(unknown_event);\n     }\n     var raw_data_event = {};\n     raw_data_event.n = \"raw_data\";\n     raw_data_event.vd = '' + bytes;\n     event_array.push(raw_data_event);\n     return_object.events = event_array;\n     return return_object;\n};\n    \n    // console.log(Decode(0x02, [20,6,3,0]));\n    // module.exports = Decode;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1900,
-        "y": 420,
+        "x": 1880,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -4109,8 +4103,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 670,
-        "y": 380,
+        "x": 690,
+        "y": 580,
         "wires": []
     },
     {
@@ -4118,14 +4112,14 @@
         "type": "debug",
         "z": "ec6d74c6.c4cc58",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 370,
-        "y": 480,
+        "x": 390,
+        "y": 680,
         "wires": []
     },
     {
@@ -4145,8 +4139,8 @@
         "output": "timestamp",
         "outputType": "msg",
         "outTz": "Africa/Abidjan",
-        "x": 1740,
-        "y": 820,
+        "x": 1880,
+        "y": 980,
         "wires": [
             []
         ]
@@ -4166,57 +4160,6 @@
         ]
     },
     {
-        "id": "deb29e6.cb43a6",
-        "type": "function",
-        "z": "ec6d74c6.c4cc58",
-        "name": "",
-        "func": "var dev_id = ['temp-rh-fireplace', 'temp-rh-1'];\n\n\nfor (var i = 0 ; i < dev_id.length; i++) {\n  var newMsg = {payload: dev_id[i].n};\n  //node.send(newMsg)\n  return(newMsg);\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1620,
-        "y": 340,
-        "wires": [
-            [
-                "2b703d70.afa2e2"
-            ]
-        ]
-    },
-    {
-        "id": "9176d373.47011",
-        "type": "inject",
-        "z": "ec6d74c6.c4cc58",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1440,
-        "y": 340,
-        "wires": [
-            [
-                "deb29e6.cb43a6"
-            ]
-        ]
-    },
-    {
-        "id": "2b703d70.afa2e2",
-        "type": "debug",
-        "z": "ec6d74c6.c4cc58",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1750,
-        "y": 340,
-        "wires": []
-    },
-    {
         "id": "46acc3fa.0e350c",
         "type": "function",
         "z": "ec6d74c6.c4cc58",
@@ -4226,8 +4169,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
-        "y": 300,
+        "x": 530,
+        "y": 500,
         "wires": [
             [
                 "a2c468d2.017848",
@@ -4257,7 +4200,7 @@
         "name": "edgewood-radiobridge",
         "info": "",
         "x": 160,
-        "y": 60,
+        "y": 40,
         "wires": []
     },
     {
@@ -4847,8 +4790,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 2010,
-        "y": 60,
+        "x": 510,
+        "y": 80,
         "wires": [
             [
                 "f37298a3.0dcca8"
@@ -4874,8 +4817,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2200,
-        "y": 60,
+        "x": 700,
+        "y": 80,
         "wires": [
             []
         ]
@@ -4901,7 +4844,16 @@
         "type": "inject",
         "z": "ec6d74c6.c4cc58",
         "name": "store",
-        "repeat": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "86400",
         "crontab": "",
         "once": true,
         "onceDelay": "15",
@@ -5093,8 +5045,8 @@
         "app": "8be518d1.d9d1c8",
         "dev_id": "",
         "field": "",
-        "x": 200,
-        "y": 1340,
+        "x": 220,
+        "y": 1440,
         "wires": [
             [
                 "7f570de8.443464",
@@ -5142,8 +5094,8 @@
         "reset": "",
         "bytopic": "all",
         "outputs": 1,
-        "x": 960,
-        "y": 1420,
+        "x": 980,
+        "y": 1520,
         "wires": [
             [
                 "4fa6bad9.438c44"
@@ -5172,8 +5124,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1130,
-        "y": 1420,
+        "x": 1150,
+        "y": 1520,
         "wires": []
     },
     {
@@ -5198,8 +5150,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 770,
-        "y": 1340,
+        "x": 790,
+        "y": 1440,
         "wires": [
             [
                 "55fd3b1e.39ce74",
@@ -5232,8 +5184,8 @@
         "label": "Temperature",
         "format": "{{msg.payload.temp_f}}",
         "layout": "row-spread",
-        "x": 970,
-        "y": 1540,
+        "x": 990,
+        "y": 1640,
         "wires": []
     },
     {
@@ -5248,8 +5200,8 @@
         "label": "Latitude",
         "format": "{{msg.payload.latitude}}",
         "layout": "row-spread",
-        "x": 960,
-        "y": 1460,
+        "x": 980,
+        "y": 1560,
         "wires": []
     },
     {
@@ -5264,8 +5216,8 @@
         "label": "Longitude",
         "format": "{{msg.payload.longitude}}",
         "layout": "row-spread",
-        "x": 960,
-        "y": 1500,
+        "x": 980,
+        "y": 1600,
         "wires": []
     },
     {
@@ -5279,8 +5231,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 370,
-        "y": 1220,
+        "x": 390,
+        "y": 1320,
         "wires": []
     },
     {
@@ -5295,8 +5247,8 @@
         "label": "Lux",
         "format": "{{msg.payload.lux}}",
         "layout": "row-spread",
-        "x": 950,
-        "y": 1180,
+        "x": 970,
+        "y": 1280,
         "wires": []
     },
     {
@@ -5311,8 +5263,8 @@
         "label": "Moisture",
         "format": "{{msg.payload.moisture}}",
         "layout": "row-spread",
-        "x": 960,
-        "y": 1220,
+        "x": 980,
+        "y": 1320,
         "wires": []
     },
     {
@@ -5327,8 +5279,8 @@
         "label": "Temperature",
         "format": "{{msg.payload.temp_f}}",
         "layout": "row-spread",
-        "x": 970,
-        "y": 1140,
+        "x": 990,
+        "y": 1240,
         "wires": []
     },
     {
@@ -5343,8 +5295,8 @@
         "label": "X_Acc",
         "format": "{{msg.payload.x_acc}}",
         "layout": "row-spread",
-        "x": 950,
-        "y": 1260,
+        "x": 970,
+        "y": 1360,
         "wires": []
     },
     {
@@ -5359,8 +5311,8 @@
         "label": "Y_Acc",
         "format": "{{msg.payload.y_acc}}",
         "layout": "row-spread",
-        "x": 950,
-        "y": 1300,
+        "x": 970,
+        "y": 1400,
         "wires": []
     },
     {
@@ -5375,8 +5327,8 @@
         "label": "Z_Acc",
         "format": "{{msg.payload.z_acc}}",
         "layout": "row-spread",
-        "x": 950,
-        "y": 1340,
+        "x": 970,
+        "y": 1440,
         "wires": []
     },
     {
@@ -5394,8 +5346,8 @@
         "reset": "",
         "bytopic": "all",
         "outputs": 1,
-        "x": 960,
-        "y": 1380,
+        "x": 980,
+        "y": 1480,
         "wires": [
             [
                 "a79c555b.d6b1b8"
@@ -5424,8 +5376,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 1130,
-        "y": 1380,
+        "x": 1150,
+        "y": 1480,
         "wires": []
     },
     {
@@ -5506,8 +5458,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 770,
-        "y": 1540,
+        "x": 790,
+        "y": 1640,
         "wires": []
     },
     {
@@ -5518,8 +5470,8 @@
         "func": "//function Decoder(bytes, port) {\n  // Decode an uplink message from a buffer\n  // (array) of bytes to an object of fields.\n  //var decoded = {};\n\n  // if (port === 1) decoded.led = bytes[0];\n\n  //return decoded;\n//}\n//function Decode(fPort, bytes) {\n\n\n//function Decoder(bytes, port) {\nvar bytes = msg.payload_raw;\n\n\nif (bytes.length == 14){  \n  var event_array = [];\n  var evb_sensors = {};\n  var EVB_TYPE = {\n    none: 0,\n    led_1: 1,\n    led_2: 2,\n    lux_max: 3,\n    lux_min: 4,\n    lux: 5,\n    barometer_max: 6,\n    barometer_min: 7,\n    barometer: 8,\n    temperature_max: 9,\n    temperature__min: 10,\n    temperature: 11,\n    accelerometer_max: 12,\n    accelerometer_min: 13,\n    accelerometer: 14,\n    tx_interval: 15,\n    amps_max: 16,\n    amps_min: 17,\n    amps: 18,\n    m2x_device: 19,\n    m2x_key: 20,\n  };\n\n/*\n * Process the EVB LoRa payload.\n *\n * EVB payload contains one or more TLV fields.\n *\n * [<type: accelerometer><length: 6><x-high><x-low><y-high><y-low><z-high><z-low>]\n * [<type: barometer><length: 3><byte2><byte1><byte0>]\n * [<type: temperature><length: 2><byte-high><byte-low>]\n * \n */\n  for (var index = 0; index < bytes.length; ) {\n    var type = bytes[index++];\n  //   var length = bytes[index++];\n    var value;\n    console.log(\"type: \" + type + \" length: \" );\n\n    switch (type) {\n    case EVB_TYPE.lux:\n      if (typeof(evb_sensors.light) == \"undefined\") {\n        evb_sensors.light = {};\n      }\n      value = bytes[index++] << 8;\n      value |= bytes[index++];\n      value = value * 0.24;\n      evb_sensors.light.lux = value;\n      // web of things \n      var lux_lighting_event = {};\n      lux_lighting_event.n = \"lux_level\";\n      lux_lighting_event.u = \"lx\";\n      lux_lighting_event.v = evb_sensors.light.lux;\n      event_array.push(lux_lighting_event);\n      break;\n    case EVB_TYPE.barometer:\n      if (typeof(evb_sensors.barometer) == \"undefined\") {\n        evb_sensors.barometer = {};\n      }\n      value = bytes[index++] << 16;\n      value |= bytes[index++] << 8;\n      value |= bytes[index++];\n      value = value * 0.00025;\n      evb_sensors.barometer.pa = value;\n      \n      //web of things event array payload\n      var relative_humidity_event = {};\n      relative_humidity_event.n = \"relative_humidity\";\n      relative_humidity_event.u = \"%RH\";\n      relative_humidity_event.v = evb_sensors.barometer.pa;\n      event_array.push(relative_humidity_event);\n      \n      break;\n    case EVB_TYPE.temperature:\n      if (typeof(evb_sensors.temperature) == \"undefined\") {\n      evb_sensors.temperature = {};\n      }\n      value = (bytes[index++] << 24) >> 16;\n      value |= bytes[index++];\n      value = value * 0.0625;\n      evb_sensors.temperature.c = value;\n      evb_sensors.temperature.f =  value * 9 / 5 + 32; \n      //web of things event array payload\n      var air_temp_event = {};\n      air_temp_event.n = \"temperature\";\n      air_temp_event.u = \"Fah\";\n      air_temp_event.v = evb_sensors.temperature.f;\n      event_array.push(air_temp_event);\n      \n      break;\n    case EVB_TYPE.accelerometer:\n      if (typeof(evb_sensors.accelerometer) == \"undefined\") {\n      evb_sensors.accelerometer = {};\n      }\n      // evb_sensors.accelerometer.x = (bytes[index++] << 24) >> 16;\n      var x1 = evb_sensors.accelerometer.x = bytes[index++] ;\n      // x1 = ~x1 ; \n      // x1 = ( x1 + 1 ) % 256; \n      evb_sensors.accelerometer.x = x1 * 0.0625;//; / 15;\n      // evb_sensors.accelerometer.y = (bytes[index++] << 24) >> 16;\n      var y1 = evb_sensors.accelerometer.y = bytes[index++] ;\n      // y1 = ~ y1 ; \n      // y1 = ( y1 + 1 ) % 256;\n        \n      y1 = evb_sensors.accelerometer.y = y1 * 0.0625 ; // / 15 ;\n      // evb_sensors.accelerometer.z = (bytes[index++] << 24) >> 16;\n      var z1 = evb_sensors.accelerometer.z = bytes[index++] ;\n      // z1 = ~ z1 ; \n      // z1 = ( z1 + 1 ) % 256; \n      // z1 = z1 - 128;\n      z1 = evb_sensors.accelerometer.z = z1 * 0.0625; // / 15;\n      //web of things event array payload\n      var accelerometer_x_event = {};\n      accelerometer_x_event.n = \"x\";\n      accelerometer_x_event.u = \"axis\";\n      accelerometer_x_event.n = evb_sensors.accelerometer.x;\n      event_array.push(accelerometer_x_event);\n      \n      var accelerometer_y_event = {};\n      accelerometer_y_event.n = \"\";\n      accelerometer_y_event.u = \"axis\";\n      accelerometer_y_event.n = evb_sensors.accelerometer.y;\n      event_array.push(accelerometer_y_event);\n      \n      var accelerometer_z_event = {};\n      accelerometer_z_event.n = \"z\";\n      accelerometer_z_event.u = \"axis\";\n      accelerometer_z_event.n = evb_sensors.accelerometer.z;\n      event_array.push(accelerometer_z_event);\n      break;    \n      }\n  }\n  return {\n    //temp_c: evb_sensors.temperature.c,\n    measurement: \"LoRa_demo\",\n    temp_f: evb_sensors.temperature.f,\n    moisture: evb_sensors.barometer.pa,\n    lux: evb_sensors.light.lux,\n    x_acc: evb_sensors.accelerometer.x,\n    y_acc: evb_sensors.accelerometer.y,\n    z_acc: evb_sensors.accelerometer.z,\n    events: event_array,\n  };\n} \n\nif (bytes.length == 11) {\n\n/*\n * Process the EVB LoRa GPS Survey Sweep payload.\n * \n * Byte 0 is 0\n * Byte 1 is temperature in Celsius\n * Byte 2 is 0\n * Byte 3-6 is GPS Latitude\n * Byte 7-10 is GPS Longitude\n * Bytes 10+ is padding with 0\n * \n*/  \n  var gps_event_array = [];\n  \n  var temp_c = bytes[1];\n  var temp_f = 1.8 * temp_c + 32;\n  //web of things event array payload\n  var gps_air_temp_event = {};\n  gps_air_temp_event.n = \"temperature\";\n  gps_air_temp_event.u = \"Fah\";\n  gps_air_temp_event.v = temp_f;\n  gps_event_array.push(gps_air_temp_event);\n  \n  var latitude = ((bytes[3] << 24) | (bytes[4] << 16) | (bytes[5] << 8 ) | bytes[6])  / 2147483648*90; // 2^31 * 90\n  //web of things event array payload\n  var gps_latitude_event = {};\n  gps_latitude_event.n = \"latitude\";\n  gps_latitude_event.u = \"deg\";\n  gps_latitude_event.v = latitude;\n  gps_event_array.push(gps_latitude_event);\n  \n  var longitude = ((bytes[7] << 24) | (bytes[8] << 16) | (bytes[9] << 8 ) | bytes[10]) / 2147483648*180; // 2^31 * 180\n  //web of things event array payload\n  var gps_longitude_event = {};\n  gps_longitude_event.n = \"longitude\";\n  gps_longitude_event.u = \"deg\";\n  gps_longitude_event.v = longitude;\n  gps_event_array.push(gps_longitude_event);  \n  \n // if (port === 1) decoded.led = bytes[0];\n  return {\n    measurement: \"GPS_survey\",\n    events: gps_event_array,\n    temp_f: temp_f,\n    latitude: latitude,\n    longitude: longitude,\n  };\n} else { return { payload: \"unexpected byte length\"};  \n}\n\n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 410,
-        "y": 1540,
+        "x": 430,
+        "y": 1640,
         "wires": [
             [
                 "f2730c07.eb44d"
@@ -5534,8 +5486,8 @@
         "links": [
             "30abf79f.0ec348"
         ],
-        "x": 615,
-        "y": 300,
+        "x": 635,
+        "y": 500,
         "wires": []
     },
     {
@@ -5547,8 +5499,8 @@
         "measurement": "",
         "precision": "",
         "retentionPolicy": "",
-        "x": 470,
-        "y": 2440,
+        "x": 510,
+        "y": 2460,
         "wires": []
     },
     {
@@ -5563,7 +5515,7 @@
             "e6a2374a.5ee028"
         ],
         "x": 215,
-        "y": 2360,
+        "y": 2380,
         "wires": [
             [
                 "f176a108.7a96d"
@@ -5578,8 +5530,8 @@
         "func": "let dev_id = msg.dev_id;\nlet hardware_serial = msg.hardware_serial;\nlet app_id = msg.app_id;\nlet counter = msg.counter;\nlet events = msg.payload.events;\nlet influxMsg = {};\n\n\n/*\nTO Do...  when unknown_event is passed through to influxdb, it throws 400 bad request error.\nHow can I filter out using an array of bad events in my if statement most efficeintly?\nmap filter?\n\nlet exclusion_list = ['unknown_event', 'raw_data'];\n*/\ninfluxMsg.measurement = \"radio_bridge\";\n//var influxMsg = [];\n\n//if (msg.payload.object.events[i].n === \"temperature\") {\n\n/*\n122719 bdb - Doing a couple things here intentionally:  \n\n1) Stripping off raw_data packets - Already caputring them in mongodb if needed.  \n2) defining influxdb measurement equal to the name of the event from the codec.\n3) defining events[i].n \n\n*/\n\n\nfor (var i = 0 ; i < events.length; i++) {\n    //if (events[i].n !=[\"raw_data\", \"unknown_event\"] ){\n    if (events[i].n != \"raw_data\") {\n        influxMsg = [{\n            measurement: events[i].n,\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: events[i].n,\n            u: events[i].u,\n            v: events[i].v,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: events[i].n\n        }],}];\n        node.send(influxMsg);\n    } else {}\n}    \n\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 950,
-        "y": 1100,
+        "x": 970,
+        "y": 1200,
         "wires": [
             [
                 "7f05c1bb.5f016"
@@ -5597,8 +5549,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1130,
-        "y": 1100,
+        "x": 1150,
+        "y": 1200,
         "wires": []
     },
     {
@@ -5609,8 +5561,8 @@
         "func": "let dev_id = msg.dev_id;\nlet hardware_serial = msg.hardware_serial;\nlet app_id = msg.app_id;\nlet counter = msg.counter;\nlet events = msg.payload.events;\nlet influxMsg = {};\n\nlet latitude = msg.payload.latitude;\nlet longitude = msg.payload.longitude;\nlet temp_f = msg.payload.temp_f;\nlet frequency = msg.metadata.frequency;\nlet data_rate = msg.metadata.data_rate\nlet airtime = msg.metadata.airtime;\n\n\nlet measurement = msg.payload.measurement;\nlet geoloc = \"mbox gps survey\"\n\ninfluxMsg = [{\nmeasurement: measurement,\npayload: [{\n    dev_id: dev_id,\n    dev_eui: hardware_serial,\n    msg_counter: counter,\n    latitude: latitude,\n    longitude: longitude,\n    temp_f: temp_f,\n    frequency: frequency,\n    data_rate: data_rate,\n    airtime: airtime,\n    },{\n    app_id: app_id,\n    device_id: dev_id,\n    event_name: geoloc,\n    }],}];\n\nreturn influxMsg;    ",
         "outputs": 1,
         "noerr": 0,
-        "x": 950,
-        "y": 1580,
+        "x": 970,
+        "y": 1680,
         "wires": [
             [
                 "ab76c53c.5b4f78",
@@ -5629,8 +5581,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1210,
-        "y": 1700,
+        "x": 1230,
+        "y": 1800,
         "wires": []
     },
     {
@@ -5642,8 +5594,8 @@
             "56a1fccf.ecb884",
             "d43cfd50.963c4"
         ],
-        "x": 1295,
-        "y": 1580,
+        "x": 1315,
+        "y": 1680,
         "wires": []
     },
     {
@@ -5789,8 +5741,8 @@
         "z": "ec6d74c6.c4cc58",
         "name": "",
         "property": "payload.events",
-        "x": 1060,
-        "y": 1700,
+        "x": 1080,
+        "y": 1800,
         "wires": [
             [
                 "d622c24d.b2d"
@@ -5808,8 +5760,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1330,
-        "y": 1520,
+        "x": 1350,
+        "y": 1620,
         "wires": []
     },
     {
@@ -6210,12 +6162,21 @@
         "type": "inject",
         "z": "171b21f.9e6efde",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "82800",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "10.0.0.205",
+        "payload": "10.0.0.207",
         "payloadType": "str",
         "x": 170,
         "y": 140,
@@ -7752,68 +7713,6 @@
         "wires": []
     },
     {
-        "id": "b7d36b69.3839e8",
-        "type": "ttn event",
-        "z": "f6c0ab56.cd9818",
-        "name": "",
-        "app": "e199e3e1.ec71c",
-        "dev_id": "",
-        "event": "#",
-        "x": 160,
-        "y": 140,
-        "wires": [
-            [
-                "ba06e5c7.f453d8"
-            ]
-        ]
-    },
-    {
-        "id": "9421ae84.96749",
-        "type": "ttn uplink",
-        "z": "f6c0ab56.cd9818",
-        "name": "",
-        "app": "e199e3e1.ec71c",
-        "dev_id": "",
-        "field": "",
-        "x": 160,
-        "y": 240,
-        "wires": [
-            [
-                "5086d5a6.678b2c"
-            ]
-        ]
-    },
-    {
-        "id": "ba06e5c7.f453d8",
-        "type": "debug",
-        "z": "f6c0ab56.cd9818",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 350,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "5086d5a6.678b2c",
-        "type": "debug",
-        "z": "f6c0ab56.cd9818",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 350,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "2a7ab9d1.6964f6",
         "type": "inject",
         "z": "4576b216.7dd43c",
@@ -7841,7 +7740,7 @@
         "func": "//\"Authorization: Bearer eyJrIjoidTZUNGNFU3ZMd29jU0dJUmVJYVNwVVVCSEsyRlJiRE8iLCJuIjoibm9kZS1yZWQiLCJpZCI6MX0=\" https://10.0.0.10/grafana/api/dashboards/home\n\n\nlet bearer_token = 'Bearer eyJrIjoidTZUNGNFU3ZMd29jU0dJUmVJYVNwVVVCSEsyRlJiRE8iLCJuIjoibm9kZS1yZWQiLCJpZCI6MX0=';\n\n//msg.url = 'https://10.0.0.10/grafana/api/keys';\nmsg.url = 'https://10.0.0.10/grafana/api/dashboards/home';\nmsg.method = 'GET';\nmsg.headers = {\n    Accept: \"application/json\",\n    'Content-Type': \"application/json\",\n    Authorization: bearer_token,\n};\n\nmsg.payload = {};\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
+        "x": 320,
         "y": 180,
         "wires": [
             [
@@ -7861,7 +7760,7 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 590,
+        "x": 620,
         "y": 180,
         "wires": []
     },
@@ -7878,7 +7777,7 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 440,
+        "x": 470,
         "y": 180,
         "wires": [
             [
@@ -7897,7 +7796,7 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 430,
+        "x": 460,
         "y": 100,
         "wires": []
     },
@@ -7929,7 +7828,7 @@
         "func": "//\"Authorization: Bearer eyJrIjoidTZUNGNFU3ZMd29jU0dJUmVJYVNwVVVCSEsyRlJiRE8iLCJuIjoibm9kZS1yZWQiLCJpZCI6MX0=\" https://10.0.0.10/grafana/api/dashboards/home\n\n\nlet bearer_token = 'Bearer eyJrIjoidTZUNGNFU3ZMd29jU0dJUmVJYVNwVVVCSEsyRlJiRE8iLCJuIjoibm9kZS1yZWQiLCJpZCI6MX0=';\n\nmsg.url = 'https://10.0.0.10/grafana/api/auth/keys';\nmsg.method = 'POST';\nmsg.headers = {\n    Accept: \"application/json\",\n    'Content-Type': \"application/json\",\n    Authorization: bearer_token,\n};\n\nmsg.payload = {\n  \"name\": \"node-red-key\",\n  \"role\": \"Admin\",\n  \"secondsToLive\": null\n};\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 290,
+        "x": 320,
         "y": 400,
         "wires": [
             [
@@ -7949,7 +7848,7 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 590,
+        "x": 620,
         "y": 400,
         "wires": []
     },
@@ -7966,7 +7865,7 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 440,
+        "x": 470,
         "y": 400,
         "wires": [
             [
@@ -7985,73 +7884,9 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 430,
+        "x": 460,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "89c76a35.80b908",
-        "type": "inject",
-        "z": "b9ee3f7a.d9595",
-        "name": "inject",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "86400",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "10",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 280,
-        "wires": [
-            [
-                "4b4be5be.a0e5ac"
-            ]
-        ]
-    },
-    {
-        "id": "4b4be5be.a0e5ac",
-        "type": "function",
-        "z": "b9ee3f7a.d9595",
-        "name": "",
-        "func": "let hostname = flow.get('rainMachine_ip')\n\nmsg.url = 'https://'+hostname+':8080/api/4/auth/login'\nmsg.method = 'POST'\nmsg.payload = {\n    \"pwd\": \"happyhour\", \n    \"remember\":0\n};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 330,
-        "y": 280,
-        "wires": [
-            [
-                "46ffd8e.c1b6a28"
-            ]
-        ]
-    },
-    {
-        "id": "46ffd8e.c1b6a28",
-        "type": "http request",
-        "z": "b9ee3f7a.d9595",
-        "name": "",
-        "method": "use",
-        "ret": "txt",
-        "paytoqs": false,
-        "url": "",
-        "tls": "f21111d7.3018c",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 570,
-        "y": 280,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "873d3542.8d17a8",
@@ -8550,9 +8385,7 @@
         "x": 155,
         "y": 180,
         "wires": [
-            [
-                "d89c6ebb.cf6c2"
-            ]
+            []
         ]
     },
     {
@@ -8749,8 +8582,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 360,
-        "y": 360,
+        "x": 380,
+        "y": 560,
         "wires": [
             [
                 "46acc3fa.0e350c"
@@ -8776,35 +8609,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "3ff49747.7df1a8",
-        "type": "debug",
-        "z": "ec6d74c6.c4cc58",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 770,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "9838d745.f0ade8",
-        "type": "link out",
-        "z": "1fb0f65a.416e0a",
-        "name": "grafanaAlertOut",
-        "links": [
-            "4574ac93.2a3224"
-        ],
-        "x": 735,
-        "y": 800,
+        "x": 540,
+        "y": 620,
         "wires": []
     },
     {
@@ -8820,9 +8626,7 @@
         "x": 420,
         "y": 860,
         "wires": [
-            [
-                "3175ccdf.bbc2f4"
-            ]
+            []
         ]
     },
     {
@@ -8836,46 +8640,8 @@
         "x": 155,
         "y": 220,
         "wires": [
-            [
-                "d89c6ebb.cf6c2"
-            ]
+            []
         ]
-    },
-    {
-        "id": "3175ccdf.bbc2f4",
-        "type": "deduplicate",
-        "z": "1fb0f65a.416e0a",
-        "name": "",
-        "keyproperty": "",
-        "expirypolicy": "keep",
-        "registryclass": "",
-        "noderole": "standalone",
-        "expiry": "43200",
-        "x": 610,
-        "y": 860,
-        "wires": [
-            [
-                "9838d745.f0ade8"
-            ],
-            [
-                "e542924f.5c6e9"
-            ]
-        ]
-    },
-    {
-        "id": "e542924f.5c6e9",
-        "type": "debug",
-        "z": "1fb0f65a.416e0a",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 770,
-        "y": 900,
-        "wires": []
     },
     {
         "id": "30af0c89.c3a304",
@@ -8897,8 +8663,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 650,
-        "y": 160,
+        "x": 670,
+        "y": 360,
         "wires": [
             [
                 "e7f5e7b0.d97258",
@@ -8918,8 +8684,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 790,
-        "y": 160,
+        "x": 810,
+        "y": 360,
         "wires": []
     },
     {
@@ -8961,8 +8727,8 @@
         "links": [
             "41193467.0ed24c"
         ],
-        "x": 755,
-        "y": 100,
+        "x": 775,
+        "y": 300,
         "wires": []
     },
     {
@@ -8985,8 +8751,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1150,
-        "y": 1580,
+        "x": 1170,
+        "y": 1680,
         "wires": [
             [
                 "d66ec734.e963e8"
@@ -9008,8 +8774,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1330,
-        "y": 1640,
+        "x": 1350,
+        "y": 1740,
         "wires": []
     },
     {
@@ -9033,8 +8799,8 @@
         "z": "ec6d74c6.c4cc58",
         "name": "TTN Mbox Codec",
         "info": "//function Decoder(bytes, port) {\n  // Decode an uplink message from a buffer\n  // (array) of bytes to an object of fields.\n  //var decoded = {};\n\n  // if (port === 1) decoded.led = bytes[0];\n\n  //return decoded;\n//}\n//function Decode(fPort, bytes) {\n\n\nfunction Decoder(bytes, port) {\nif (bytes.length == 14){  \n  var event_array = [];\n  var evb_sensors = {};\n  var EVB_TYPE = {\n    none: 0,\n    led_1: 1,\n    led_2: 2,\n    lux_max: 3,\n    lux_min: 4,\n    lux: 5,\n    barometer_max: 6,\n    barometer_min: 7,\n    barometer: 8,\n    temperature_max: 9,\n    temperature__min: 10,\n    temperature: 11,\n    accelerometer_max: 12,\n    accelerometer_min: 13,\n    accelerometer: 14,\n    tx_interval: 15,\n    amps_max: 16,\n    amps_min: 17,\n    amps: 18,\n    m2x_device: 19,\n    m2x_key: 20,\n  };\n\n/*\n * Process the EVB LoRa payload.\n *\n * EVB payload contains one or more TLV fields.\n *\n * [<type: accelerometer><length: 6><x-high><x-low><y-high><y-low><z-high><z-low>]\n * [<type: barometer><length: 3><byte2><byte1><byte0>]\n * [<type: temperature><length: 2><byte-high><byte-low>]\n * \n */\n  for (var index = 0; index < bytes.length; ) {\n    var type = bytes[index++];\n  //   var length = bytes[index++];\n    var value;\n    console.log(\"type: \" + type + \" length: \" );\n\n    switch (type) {\n    case EVB_TYPE.lux:\n      if (typeof(evb_sensors.light) == \"undefined\") {\n        evb_sensors.light = {};\n      }\n      value = bytes[index++] << 8;\n      value |= bytes[index++];\n      value = value * 0.24;\n      evb_sensors.light.lux = value;\n      // web of things \n      var lux_lighting_event = {};\n      lux_lighting_event.n = \"lux_level\";\n      lux_lighting_event.u = \"lx\";\n      lux_lighting_event.v = evb_sensors.light.lux;\n      event_array.push(lux_lighting_event);\n      break;\n    case EVB_TYPE.barometer:\n      if (typeof(evb_sensors.barometer) == \"undefined\") {\n        evb_sensors.barometer = {};\n      }\n      value = bytes[index++] << 16;\n      value |= bytes[index++] << 8;\n      value |= bytes[index++];\n      value = value * 0.00025;\n      evb_sensors.barometer.pa = value;\n      \n      //web of things event array payload\n      var relative_humidity_event = {};\n      relative_humidity_event.n = \"relative_humidity\";\n      relative_humidity_event.u = \"%RH\";\n      relative_humidity_event.v = evb_sensors.barometer.pa;\n      event_array.push(relative_humidity_event);\n      \n      break;\n    case EVB_TYPE.temperature:\n      if (typeof(evb_sensors.temperature) == \"undefined\") {\n      evb_sensors.temperature = {};\n      }\n      value = (bytes[index++] << 24) >> 16;\n      value |= bytes[index++];\n      value = value * 0.0625;\n      evb_sensors.temperature.c = value;\n      evb_sensors.temperature.f =  value * 9 / 5 + 32; \n      //web of things event array payload\n      var air_temp_event = {};\n      air_temp_event.n = \"temperature\";\n      air_temp_event.u = \"Fah\";\n      air_temp_event.v = evb_sensors.temperature.f;\n      event_array.push(air_temp_event);\n      \n      break;\n    case EVB_TYPE.accelerometer:\n      if (typeof(evb_sensors.accelerometer) == \"undefined\") {\n      evb_sensors.accelerometer = {};\n      }\n      // evb_sensors.accelerometer.x = (bytes[index++] << 24) >> 16;\n      var x1 = evb_sensors.accelerometer.x = bytes[index++] ;\n      // x1 = ~x1 ; \n      // x1 = ( x1 + 1 ) % 256; \n      evb_sensors.accelerometer.x = x1 * 0.0625;//; / 15;\n      // evb_sensors.accelerometer.y = (bytes[index++] << 24) >> 16;\n      var y1 = evb_sensors.accelerometer.y = bytes[index++] ;\n      // y1 = ~ y1 ; \n      // y1 = ( y1 + 1 ) % 256;\n        \n      y1 = evb_sensors.accelerometer.y = y1 * 0.0625 ; // / 15 ;\n      // evb_sensors.accelerometer.z = (bytes[index++] << 24) >> 16;\n      var z1 = evb_sensors.accelerometer.z = bytes[index++] ;\n      // z1 = ~ z1 ; \n      // z1 = ( z1 + 1 ) % 256; \n      // z1 = z1 - 128;\n      z1 = evb_sensors.accelerometer.z = z1 * 0.0625; // / 15;\n      //web of things event array payload\n      var accelerometer_x_event = {};\n      accelerometer_x_event.n = \"x_axis\";\n      accelerometer_x_event.u = \"axis\";\n      accelerometer_x_event.v = evb_sensors.accelerometer.x;\n      event_array.push(accelerometer_x_event);\n      \n      var accelerometer_y_event = {};\n      accelerometer_y_event.n = \"y_axis\";\n      accelerometer_y_event.u = \"axis\";\n      accelerometer_y_event.v = evb_sensors.accelerometer.y;\n      event_array.push(accelerometer_y_event);\n      \n      var accelerometer_z_event = {};\n      accelerometer_z_event.n = \"z_axis\";\n      accelerometer_z_event.u = \"axis\";\n      accelerometer_z_event.v = evb_sensors.accelerometer.z;\n      event_array.push(accelerometer_z_event);\n      break;    \n      }\n  }\n  return {\n    //temp_c: evb_sensors.temperature.c,\n    measurement: \"LoRa_demo\",\n    temp_f: evb_sensors.temperature.f,\n    moisture: evb_sensors.barometer.pa,\n    lux: evb_sensors.light.lux,\n    x_acc: evb_sensors.accelerometer.x,\n    y_acc: evb_sensors.accelerometer.y,\n    z_acc: evb_sensors.accelerometer.z,\n    events: event_array,\n  };\n} \n\nif (bytes.length == 11) {\n\n/*\n * Process the EVB LoRa GPS Survey Sweep payload.\n * \n * Byte 0 is 0\n * Byte 1 is temperature in Celsius\n * Byte 2 is 0\n * Byte 3-6 is GPS Latitude\n * Byte 7-10 is GPS Longitude\n * Bytes 10+ is padding with 0\n * \n*/  \n  var gps_event_array = [];\n  \n  var temp_c = bytes[1];\n  var temp_f = 1.8 * temp_c + 32;\n  //web of things event array payload\n  var gps_air_temp_event = {};\n  gps_air_temp_event.n = \"temperature\";\n  gps_air_temp_event.u = \"Fah\";\n  gps_air_temp_event.v = temp_f;\n  gps_event_array.push(gps_air_temp_event);\n  \n  var latitude = ((bytes[3] << 24) | (bytes[4] << 16) | (bytes[5] << 8 ) | bytes[6])  / 2147483648*90; // 2^31 * 90\n  //web of things event array payload\n  var gps_latitude_event = {};\n  gps_latitude_event.n = \"latitude\";\n  gps_latitude_event.u = \"deg\";\n  gps_latitude_event.v = latitude;\n  gps_event_array.push(gps_latitude_event);\n  \n  var longitude = ((bytes[7] << 24) | (bytes[8] << 16) | (bytes[9] << 8 ) | bytes[10]) / 2147483648*180; // 2^31 * 180\n  //web of things event array payload\n  var gps_longitude_event = {};\n  gps_longitude_event.n = \"longitude\";\n  gps_longitude_event.u = \"deg\";\n  gps_longitude_event.v = longitude;\n  gps_event_array.push(gps_longitude_event);  \n  \n // if (port === 1) decoded.led = bytes[0];\n  return {\n    measurement: \"GPS_survey\",\n    events: gps_event_array,\n    temp_f: temp_f,\n    latitude: latitude,\n    longitude: longitude,\n  };\n} else { return { payload: \"unexpected byte length\"};  \n}\n}",
-        "x": 170,
-        "y": 1060,
+        "x": 190,
+        "y": 1160,
         "wires": []
     },
     {
@@ -9044,7 +8810,7 @@
         "name": "TTN RadioBridge Codec",
         "info": "//   RADIO BRIDGE PACKET DECODER v1.0\n// (c) 2019 RadioBridge USA by John Sheldon\n\n// General defines used in decode\nvar RESET_EVENT = \"00\";\nvar SUPERVISORY_EVENT = \"01\";\nvar TAMPER_EVENT = \"02\";\nvar LINK_QUALITY_EVENT = \"FB\";\nvar RATE_LIMIT_EXCEEDED_EVENT = \"FC\";\nvar TEST_MESSAGE_EVENT = \"FD\";\nvar DOWNLINK_ACK_EVENT = \"FF\";\nvar DOOR_WINDOW_EVENT = \"03\";\nvar PUSH_BUTTON_EVENT = \"06\";\nvar CONTACT_EVENT = \"07\";\nvar WATER_EVENT = \"08\";\nvar TEMPERATURE_EVENT = \"09\";\nvar TILT_EVENT = \"0A\";\nvar ATH_EVENT = \"0D\";\nvar ABM_EVENT = \"0E\";\nvar TILT_HP_EVENT = \"0F\";\nvar ULTRASONIC_EVENT = \"10\";\nvar SENSOR420MA_EVENT = \"11\";\nvar THERMOCOUPLE_EVENT = \"13\";\nvar VOLTMETER_EVENT = \"14\";\nvar CUSTOM_SENSOR_EVENT = \"15\";\nvar GPS_EVENT = \"16\";\nvar HONEYWELL5800_EVENT = \"17\";\nvar MAGNETOMETER_EVENT = \"18\";\nvar VIBRATION_LB_EVENT = \"19\";\nvar VIBRATION_HB_EVENT = \"1A\";\n\n\n\n// Different network servers have different callback functions\n// Each of these is mapped to the generic decoder function\n\n// ----------------------------------------------\n\n// function called by ChirpStack\n//function Decode(fPort, bytes, variables) {\n//    return Generic_Decoder(bytes, fPort);\n//}\n\n// function called by TTN\nfunction Decoder(bytes, port) {\n    return Generic_Decoder(bytes, port);\n}\n\n// ----------------------------------------------\n\n\n\n// The generic decode function called by one of the above network server specific callbacks\nfunction Generic_Decoder(bytes, port) {\n\n    // data structure which contains decoded messages\n    var decoded = {};\n    var event_array = [];\n    // The first byte contains the protocol version (upper nibble) and packet counter (lower nibble)\n    ProtocolVersion = (bytes[0] >> 4) & 0x0f;\n    PacketCounter = bytes[0] & 0x0f;\n\n\n    // the event type is defined in the second byte\n    EventType = Hex(bytes[1]);\n\n    // the rest of the message decode is dependent on the type of event\n    switch (EventType) {\n\n        // ==================    RESET EVENT    ====================\n        case RESET_EVENT:\n\n            decoded.Message = \"Event: Reset\";\n\n            // third byte is device type, convert to hex format for case statement\n            DeviceTypeByte = Hex(bytes[2]);\n\n            // device types are enumerated below\n            switch (DeviceTypeByte) {\n                case \"01\": DeviceType = \"Door/Window Sensor\"; break;\n                case \"02\": DeviceType = \"Door/Window High Security\"; break;\n                case \"03\": DeviceType = \"Contact Sensor\"; break;\n                case \"04\": DeviceType = \"No-Probe Temperature Sensor\"; break;\n                case \"05\": DeviceType = \"External-Probe Temperature Sensor\"; break;\n                case \"06\": DeviceType = \"Single Push Button\"; break;\n                case \"07\": DeviceType = \"Dual Push Button\"; break;\n                case \"08\": DeviceType = \"Acceleration-Based Movement Sensor\"; break;\n                case \"09\": DeviceType = \"Tilt Sensor\"; break;\n                case \"0A\": DeviceType = \"Water Sensor\"; break;\n                case \"0B\": DeviceType = \"Tank Level Float Sensor\"; break;\n                case \"0C\": DeviceType = \"Glass Break Sensor\"; break;\n                case \"0D\": DeviceType = \"Ambient Light Sensor\"; break;\n                case \"0E\": DeviceType = \"Air Temperature and Humidity Sensor\"; break;\n                case \"0F\": DeviceType = \"High-Precision Tilt Sensor\"; break;\n                case \"10\": DeviceType = \"Ultrasonic Level Sensor\"; break;\n                case \"11\": DeviceType = \"4-20mA Current Loop Sensor\"; break;\n                case \"12\": DeviceType = \"Ext-Probe Air Temp and Humidity Sensor\"; break;\n                case \"13\": DeviceType = \"Thermocouple Temperature Sensor\"; break;\n                case \"14\": DeviceType = \"Voltage Sensor\"; break;\n                case \"15\": DeviceType = \"Custom Sensor\"; break;\n                case \"16\": DeviceType = \"GPS\"; break;\n                case \"17\": DeviceType = \"Honeywell 5800 Bridge\"; break;\n                case \"18\": DeviceType = \"Magnetometer\"; break;\n                case \"19\": DeviceType = \"Vibration Sensor - Low Frequency\"; break;\n                case \"1A\": DeviceType = \"Vibration Sensor - High Frequency\"; break;\n                default: DeviceType = \"Device Undefined\"; break;\n            }\n\n            decoded.Message += \", Device Type: \" + DeviceType;\n\n            // the hardware version has the major version in the upper nibble, and the minor version in the lower nibble\n            HardwareVersion = ((bytes[3] >> 4) & 0x0f) + \".\" + (bytes[3] & 0x0f);\n\n            decoded.Message += \", Hardware Version: v\" + HardwareVersion;\n\n            // the firmware version has two different formats depending on the most significant bit\n            FirmwareFormat = (bytes[4] >> 7) & 0x01;\n\n            // FirmwareFormat of 0 is old format, 1 is new format\n            // old format is has two sections x.y\n            // new format has three sections x.y.z\n            if (FirmwareFormat == 0)\n                FirmwareVerison = bytes[4] + \".\" + bytes[5];\n            else\n                FirmwareVerison = ((bytes[4] >> 2) & 0x1F) + \".\" + ((bytes[4] & 0x03) + ((bytes[5] >> 5) & 0x07)) + \".\" + (bytes[5] & 0x1F);\n\n            decoded.Message += \", Firmware Version: v\" + FirmwareVerison;\n\n            break;\n\n        // ================   SUPERVISORY EVENT   ==================\n\n        case SUPERVISORY_EVENT:\n            decoded.Message = \"Event: Supervisory\";\n\n            event_type = {description: \"Supervisory\"};\n            decoded.event_type = event_type;\n\n            // note that the sensor state in the supervisory message is being depreciated, so those are not decoded here\n\n            // battery voltage is in the format x.y volts where x is upper nibble and y is lower nibble\n            \n            BatteryLevel = ((bytes[4] >> 4) & 0x0f) + \".\" + (bytes[4] & 0x0f);\n        \n            var battery_event = {};\n                    battery_event.n = \"battery_voltage\";\n                    battery_event.u = \"V\";\n                    battery_event.v = BatteryLevel;\n            event_array.push(battery_event);\n\n            decoded.events = event_array;\n            decoded.Message += \", Battery Voltage: \" + BatteryLevel + \"V\";\n\n            // the accumulation count is a 16-bit value\n            AccumulationCount = (bytes[9] * 256) + bytes[10];\n            decoded.Message += \", Accumulation Count: \" + AccumulationCount;\n            var accumulation_event = {};\n                    accumulation_event.n = \"accumulation\";\n                    accumulation_event.u = \"ct\";\n                    accumulation_event.v = AccumulationCount;\n            event_array.push(accumulation_event);\n\n\n            // decode bits for error code byte\n            TamperSinceLastReset = (bytes[2] >> 4) & 0x01;\n            decoded.Message += \", Tamper Since Last Reset: \" + TamperSinceLastReset;\n            var tamper_reset_event = {};\n                    tamper_reset_event.n = \"tamper_last_reset\";\n                    tamper_reset_event.u = \"curr\";\n                    tamper_reset_event.v = TamperSinceLastReset;\n            event_array.push(tamper_reset_event);\n\n            CurrentTamperState = (bytes[2] >> 3) & 0x01;\n            decoded.Message += \", Current Tamper State: \" + CurrentTamperState;\n            var tamper_event = {};\n                    tamper_event.n = \"tamper_state\";\n                    tamper_event.u = \"curr\";\n                    tamper_event.v = CurrentTamperState;\n            event_array.push(tamper_event);\n\n\n\n            ErrorWithLastDownlink = (bytes[2] >> 2) & 0x01;\n            decoded.Message += \", Error With Last Downlink: \" + ErrorWithLastDownlink;\n            var downlink_error_event = {};\n                    downlink_error_event.n = \"downlink_error\";\n                    downlink_error_event.u = \"status\";\n                    downlink_error_event.v = ErrorWithLastDownlink;\n            event_array.push(downlink_error_event);\n\n            BatteryLow = (bytes[2] >> 1) & 0x01;\n            decoded.Message += \", Battery Low: \" + BatteryLow;\n\n            RadioCommError = bytes[2] & 0x01;\n            decoded.Message += \", Radio Comm Error: \" + RadioCommError;\n            var radio_error_event = {};\n                    radio_error_event.n = \"radio_error\";\n                    radio_error_event.u = \"status\";\n                    radio_error_event.v = RadioCommError;\n            event_array.push(radio_error_event);\n\n\n\n\n//bdb\n//            event_type = {};\n//                    event_type.description = \"Supervisory\";\n//                    event_array.push(event_type);\n\n\n\n\n          \n//bdb\n\n\n            break;\n\n        // ==================   TAMPER EVENT    ====================\n        case TAMPER_EVENT:\n            decoded.Message = \"Event: Tamper\";\n\n            TamperState = bytes[2];\n\n            // tamper state is 0 for open, 1 for closed\n            if (TamperState == 0)\n                decoded.Message += \", State: Open\";\n            else\n                decoded.Message += \", State: Closed\";\n\n            break;\n\n        // ==================   LINK QUALITY EVENT    ====================\n        case LINK_QUALITY_EVENT:\n            decoded.Message = \"Event: Link Quality\";\n\n            CurrentSubBand = bytes[2];\n            decoded.Message += \", Current Sub-Band: \" + CurrentSubBand;\n\n            RSSILastDownlink = bytes[3];\n            decoded.Message += \", RSSI of Last Downlink: \" + RSSILastDownlink;\n\n            SNRLastDownlink = bytes[4];\n            decoded.Message += \", SNR of Last Downlink: \" + SNRLastDownlink;\n\n            break;\n\n        // ==================   RATE LIMIT EXCEEDED EVENT    ====================\n        case RATE_LIMIT_EXCEEDED_EVENT:\n\n            // this feature is depreciated so it is not decoded here\n            decoded.Message = \"Event: Rate Limit Exceeded. Depreciated Event And Not Decoded Here\";\n\n            break;\n\n        // ==================   TEST MESSAGE EVENT    ====================\n        case TEST_MESSAGE_EVENT:\n\n            // this feature is depreciated so it is not decoded here\n            decoded.Message = \"Event: Test Message. Depreciated Event And Not Decoded Here\";\n\n            break;\n\n\n        // ================  DOOR/WINDOW EVENT  ====================\n        case DOOR_WINDOW_EVENT:\n\n            decoded.Message = \"Event: Door/Window\";\n\n            SensorState = bytes[2];\n\n            // 0 is closed, 1 is open\n            if (SensorState == 0)\n                decoded.Message += \", State: Closed\";\n            else\n                decoded.Message += \", State: Open\";\n\n            break;\n\n        // ===============  PUSH BUTTON EVENT   ===================\n        case PUSH_BUTTON_EVENT:\n\n            decoded.Message = \"Event: Push Button\";\n\n            ButtonID = Hex(bytes[2]);\n\n            switch (ButtonID) {\n                // 01 and 02 used on two button\n                case \"01\": ButtonReference = \"Button 1\"; break;\n                case \"02\": ButtonReference = \"Button 2\"; break;\n                // 03 is single button\n                case \"03\": ButtonReference = \"Button 1\"; break;\n                // 12 when both buttons pressed on two button\n                case \"12\": ButtonReference = \"Both Buttons\"; break;\n                default: ButtonReference = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Button ID: \" + ButtonReference;\n\n            ButtonState = bytes[3];\n\n            switch (ButtonState) {\n                case 0: SensorStateDescription = \"Pressed\"; break;\n                case 1: SensorStateDescription = \"Released\"; break;\n                case 2: SensorStateDescription = \"Held\"; break;\n                default: SensorStateDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Button State: \" + SensorStateDescription;\n\n            break;\n\n        // =================   CONTACT EVENT   =====================\n        case CONTACT_EVENT:\n\n            decoded.Message = \"Event: Dry Contact\";\n\n            ContactState = bytes[2];\n\n            // if state byte is 0 then shorted, if 1 then opened\n            if (ContactState == 0)\n                SensorState = \"Contacts Shorted\";\n            else\n                SensorState = \"Contacts Opened\";\n\n            decoded.Message += \", Sensor State: \" + SensorState;\n\n            break;\n\n        // ===================  WATER EVENT  =======================\n        case WATER_EVENT:\n\n            decoded.Message = \"Event: Water\";\n\n            SensorState = bytes[2];\n\n            if (SensorState == 0)\n                decoded.Message += \", State: Water Present\";\n            else\n                decoded.Message += \", State: Water Not Present\";\n\n            WaterRelativeResistance = bytes[3];\n\n            decoded.Message += \", Relative Resistance: \" + WaterRelativeResistance;\n\n            break;\n\n        // ================== TEMPERATURE EVENT ====================\n        case TEMPERATURE_EVENT:\n\n            decoded.Message = \"Event: Temperature\";\n\n            TemperatureEvent = bytes[2];\n\n            switch (TemperatureEvent) {\n                case 0: TemperatureEventDescription = \"Periodic Report\"; break;\n                case 1: TemperatureEventDescription = \"Temperature Over Upper Threshold\"; break;\n                case 2: TemperatureEventDescription = \"Temperature Under Lower Threshold\"; break;\n                case 3: TemperatureEventDescription = \"Temperature Report-on-Change Increase\"; break;\n                case 4: TemperatureEventDescription = \"Temperature Report-on-Change Decrease\"; break;\n                default: TemperatureEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Temperature Event: \" + TemperatureEventDescription;\n\n            // current temperature reading\n            CurrentTemperature = Convert(bytes[3], 0);\n            decoded.Message += \", Current Temperature: \" + CurrentTemperature;\n\n            // relative temp measurement for use with an alternative calibration table\n            RelativeMeasurement = Convert(bytes[4], 0);\n            decoded.Message += \", Relative Measurement: \" + RelativeMeasurement;\n\n//bdb\n            temperature_f = (CurrentTemperature * 9/5)+32;\n            event_type = {description: TemperatureEventDescription};\n            decoded.event_type = event_type;\n            var air_temp_event = {};\n                    air_temp_event.n = \"temperature\";\n                    air_temp_event.u = \"Fah\";\n                    air_temp_event.v= temperature_f;\n            event_array.push(air_temp_event);\n\n            decoded.events = event_array;\n\n//bdb\n            break;\n\n        // ====================  TILT EVENT  =======================\n        case TILT_EVENT:\n\n            decoded.Message = \"Event: Tilt\";\n\n            TiltEvent = bytes[2];\n\n            switch (TiltEvent) {\n                case 0: TiltEventDescription = \"Transitioned to Vertical\"; break;\n                case 1: TiltEventDescription = \"Transitioned to Horizontal\"; break;\n                case 2: TiltEventDescription = \"Report-on-Change Toward Vertical\"; break;\n                case 3: TiltEventDescription = \"Report-on-Change Toward Horizontal\"; break;\n                default: TiltEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Tilt Event: \" + TiltEventDescription;\n\n            TiltAngle = bytes[3];\n\n            decoded.Message += \", Tilt Angle: \" + TiltAngle;\n//bdb\n\n            event_type = {};\n                    event_type.description = TiltEventDescription;\n            event_array.push(event_type);\n            var tilt_event = {};\n                    tilt_event.n = \"tilt\";\n                    tilt_event.u = \"deg\";\n                    tilt.v= TiltAngle;\n            event_array.push(tilt_event);\n\n            decoded.events = event_array;\n//bdb\n            break;\n\n        // =============  AIR TEMP & HUMIDITY EVENT  ===============\n        case ATH_EVENT:\n\n            decoded.Message = \"Event: Air Temperature/Humidity\";\n\n            ATHEvent = bytes[2];\n\n            switch (ATHEvent) {\n                case 0: ATHDescription = \"Periodic Report\"; break;\n                case 1: ATHDescription = \"Temperature has Risen Above Upper Threshold\"; break;\n                case 2: ATHDescription = \"Temperature has Fallen Below Lower Threshold\"; break;\n                case 3: ATHDescription = \"Temperature Report-on-Change Increase\"; break;\n                case 4: ATHDescription = \"Temperature Report-on-Change Decrease\"; break;\n                case 5: ATHDescription = \"Humidity has Risen Above Upper Threshold\"; break;\n                case 6: ATHDescription = \"Humidity has Fallen Below Lower Threshold\"; break;\n                case 7: ATHDescription = \"Humidity Report-on-Change Increase\"; break;\n                case 8: ATHDescription = \"Humidity Report-on-Change Decrease\"; break;\n                default: ATHDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", ATH Event: \" + ATHDescription;\n\n            // integer and fractional values between two bytes\n            Temperature = Convert((bytes[3]) + ((bytes[4] >> 4) / 10), 1);\n            decoded.Message += \", Temperature: \" + Temperature;\n\n            // integer and fractional values between two bytes\n            Humidity = +(bytes[5] + ((bytes[6]>>4) / 10)).toFixed(1);\n            decoded.Message += \", Humidity: \" + Humidity;\n//bdb\n\n            temperature_f = (Temperature * 9/5)+32;\n//            event_type = {};\n//                    event_type.description = ATHDescription;\n//            event_array.push(event_type);\n              event_type = {description: ATHDescription};\n              decoded.event_type = event_type;\n\n            var air_temp_event = {};\n                    air_temp_event.n = \"temperature\";\n                    air_temp_event.u = \"Fah\";\n                    air_temp_event.v= temperature_f;\n            event_array.push(air_temp_event);\n\n            var air_humidity_event = {};\n                    air_humidity_event.n = \"relative_humidity\";\n                    air_humidity_event.u = \"%RH\";\n                    air_humidity_event.v = Humidity;\n            event_array.push(air_humidity_event);\n\n            decoded.events = event_array;\n\n//bdb\n\n            break;\n\n        // ============  ACCELERATION MOVEMENT EVENT  ==============\n        case ABM_EVENT:\n\n            decoded.Message = \"Event: Acceleration-Based Movement\";\n\n            ABMEvent = bytes[2];\n\n            if (ABMEvent == 0)\n                ABMEventDescription = \"Movement Started\";\n            else\n                ABMEventDescription = \"Movement Stopped\";\n\n            decoded.Message += \", ABM Event: \" + ABMEventDescription;\n\n            break;\n\n        // =============  HIGH-PRECISION TILT EVENT  ===============\n        case TILT_HP_EVENT:\n\n            decoded.Message = \"Event: High-Precision Tilt\";\n\n            TiltEvent = bytes[2];\n\n            switch (TiltEvent) {\n                case 0: TiltEventDescription = \"Periodic Report\"; break;\n                case 1: TiltEventDescription = \"Transitioned Toward 0-Degree Vertical Orientation\"; break;\n                case 2: TiltEventDescription = \"Transitioned Away From 0-Degree Vertical Orientation\"; break;\n                case 3: TiltEventDescription = \"Report-on-Change Toward 0-Degree Vertical Orientation\"; break;\n                case 4: TiltEventDescription = \"Report-on-Change Away From 0-Degree Vertical Orientation\"; break;\n                default: TiltEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Tilt HP Event: \" + TiltEventDescription;\n\n            // integer and fractional values between two bytes\n            Angle = +(bytes[3] + (bytes[4] / 10)).toFixed(1);\n            decoded.Message = \", Angle: \" + Angle;\n\n            Temperature = Convert(bytes[5], 0);\n            decoded.Message = \", Temperature: \" + Temperature;\n\n            break;\n\n        // ===============  ULTRASONIC LEVEL EVENT  ================\n        case ULTRASONIC_EVENT:\n\n            decoded.Message = \"Event: Ultrasonic Level\";\n\n            UltrasonicEvent = bytes[2];\n\n            switch (UltrasonicEvent) {\n                case 0: UltrasonicEventDescription = \"Periodic Report\"; break;\n                case 1: UltrasonicEventDescription = \"Distance has Risen Above Upper Threshold\"; break;\n                case 2: UltrasonicEventDescription = \"Distance has Fallen Below Lower Threshold\"; break;\n                case 3: UltrasonicEventDescription = \"Report-on-Change Increase\"; break;\n                case 4: UltrasonicEventDescription = \"Report-on-Change Decrease\"; break;\n                default: UltrasonicEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Ultrasonic Event: \" + UltrasonicEventDescription;\n\n            // distance is calculated across 16-bits\n            Distance = ((bytes[3] * 256) + bytes[4]);\n\n            decoded.Message += \", Distance: \" + Distance;\n            break;\n\n        // ================  4-20mA ANALOG EVENT  ==================\n        case SENSOR420MA_EVENT:\n\n            decoded.Message = \"Event: 4-20mA\";\n\n            Sensor420mAEvent = bytes[2];\n\n            switch (Sensor420mAEvent) {\n                case 0: Sensor420mAEventDescription = \"Periodic Report\"; break;\n                case 1: Sensor420mAEventDescription = \"Analog Value has Risen Above Upper Threshold\"; break;\n                case 2: Sensor420mAEventDescription = \"Analog Value has Fallen Below Lower Threshold\"; break;\n                case 3: Sensor420mAEventDescription = \"Report on Change Increase\"; break;\n                case 4: Sensor420mAEventDescription = \"Report on Change Decrease\"; break;\n                default: Sensor420mAEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", 4-20mA Event: \" + Sensor420mAEventDescription;\n\n            // calculatec across 16-bits, convert from units of 10uA to mA\n            Analog420Measurement = ((bytes[3] * 256) + bytes[4]) / 100;\n\n            decoded.Message += \", Current Measurement in mA: \" + Analog420Measurement;\n\n            break;\n\n        // =================  THERMOCOUPLE EVENT  ==================\n        case THERMOCOUPLE_EVENT:\n\n            decoded.Message = \"Event: Thermocouple\";\n\n            ThermocoupleEvent = bytes[2];\n\n            switch (ThermocoupleEvent) {\n                case 0: ThermocoupleEventDescription = \"Periodic Report\"; break;\n                case 1: ThermocoupleEventDescription = \"Analog Value has Risen Above Upper Threshold\"; break;\n                case 2: ThermocoupleEventDescription = \"Analog Value has Fallen Below Lower Threshold\"; break;\n                case 3: ThermocoupleEventDescription = \"Report on Change Increase\"; break;\n                case 4: ThermocoupleEventDescription = \"Report on Change Decrease\"; break;\n                default: ThermocoupleEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Thermocouple Event: \" + ThermocoupleEventDescription;\n\n            // decode is across 16-bits\n            Temperature = parseInt(((bytes[3] * 256) + bytes[4]) / 16);\n\n            decoded.Message += \", Temperature: \" + Temperature + \"°C\";\n\n            Faults = bytes[5];\n\n            // decode each bit in the fault byte\n            FaultColdOutsideRange = (Faults >> 7) & 0x01;\n            FaultHotOutsideRange = (Faults >> 6) & 0x01;\n            FaultColdAboveThresh = (Faults >> 5) & 0x01;\n            FaultColdBelowThresh = (Faults >> 4) & 0x01;\n            FaultTCTooHigh = (Faults >> 3) & 0x01;\n            FaultTCTooLow = (Faults >> 2) & 0x01;\n            FaultVoltageOutsideRange = (Faults >> 1) & 0x01;\n            FaultOpenCircuit = Faults & 0x01;\n\n            // Decode faults\n            if (Faults == 0)\n                decoded.Message += \", Fault: None\";\n            else {\n                if (FaultColdOutsideRange)\n                    decoded.Message += \", Fault: The cold-Junction temperature is outside of the normal operating range\";\n\n                if (FaultHotOutsideRange)\n                    decoded.Message += \", Fault: The hot junction temperature is outside of the normal operating range\";\n\n                if (FaultColdAboveThresh)\n                    decoded.Message += \", Fault: The cold-Junction temperature is at or above than the cold-junction temperature high threshold\";\n\n                if (FaultColdBelowThresh)\n                    decoded.Message += \", Fault: The Cold-Junction temperature is lower than the cold-junction temperature low threshold\";\n\n                if (FaultTCTooHigh)\n                    decoded.Message += \", Fault: The thermocouple temperature is too high\";\n\n                if (FaultTCTooLow)\n                    decoded.Message += \", Fault: Thermocouple temperature is too low\";\n\n                if (FaultVoltageOutsideRange)\n                    decoded.Message += \", Fault: The input voltage is negative or greater than VDD\";\n\n                if (FaultOpenCircuit)\n                    decoded.Message += \", Fault: An open circuit such as broken thermocouple wires has been detected\";\n            }\n\n            break;\n\n        // ================  VOLTMETER ANALOG EVENT  ==================\n        case VOLTMETER_EVENT:\n\n            decoded.Message = \"Event: Voltage Sensor\";\n\n            VoltmeterEvent = bytes[2];\n\n            switch (VoltmeterEvent) {\n                case 0: VoltmeterEventDescription = \"Periodic Report\"; break;\n                case 1: VoltmeterEventDescription = \"Voltage has Risen Above Upper Threshold\"; break;\n                case 2: VoltmeterEventDescription = \"Voltage has Fallen Below Lower Threshold\"; break;\n                case 3: VoltmeterEventDescription = \"Report on Change Increase\"; break;\n                case 4: VoltmeterEventDescription = \"Report on Change Decrease\"; break;\n                default: VoltmeterEventDescription = \"Undefined\";\n            }\n\n            decoded.Message += \", Voltage Sensor Event: \" + VoltmeterEventDescription;\n\n            // voltage is measured across 16-bits, convert from units of 10mV to V\n            VoltageMeasurement = ((bytes[3] * 256) + bytes[4]) / 100;\n\n            decoded.Message += \", Voltage: \" + VoltageMeasurement + \"V\";\n            break;\n\n\n        // ================  CUSTOM SENSOR EVENT  ==================\n        case CUSTOM_SENSOR_EVENT:\n\n            decoded.Message = \"Event: Custom Sensor\";\n\n            // Custom sensors are not decoded here\n\n            break;\n\n\n        // ================  VOLTMETER ANALOG EVENT  ==================\n        case GPS_EVENT:\n\n            decoded.Message = \"Event: GPS\";\n\n            GPSStatus = bytes[2];\n\n            // decode status byte\n            GPSValidFix = GPSStatus & 0x01;\n\n            if (GPSValidFix == 0)\n                GPSValidFixDescription = \", No Valid Fix\";\n            else\n                GPSValidFixDescription = \", Valid Fix\";\n\n\n            decoded.Message += \", GPS Status: \" + GPSValidFixDescription;\n\n            // latitude and longitude calculated across 32 bits each, show 12 decimal places\n            Latitude = toFixed((((bytes[3] * (2 ^ 24)) + (bytes[4] * (2 ^ 16)) + (bytes[5] * (2 ^ 8)) + bytes[6]) / (10 ^ 7)), 12);\n            Latitude = toFixed((((bytes[7] * (2 ^ 24)) + (bytes[8] * (2 ^ 16)) + (bytes[9] * (2 ^ 8)) + bytes[10]) / (10 ^ 7)), 12);\n\n            decoded.Message += \", Latitude: \" + Latitude + \", Longitude: \" + Longitude;\n\n            break;\n\n\n        // ================  HONEYWELL 5800 EVENT  ==================\n        case HONEYWELL5800_EVENT:\n\n            decoded.Message = \"Event: Honeywell 5800 Sensor Message\";\n\n            // honeywell sensor ID, 24-bits\n            HWSensorID = (bytes[2] * (2 ^ 16)) + (bytes[3] * (2 ^ 8)) + bytes[4];\n\n            decoded.Message += \", Honeywell Sensor ID: \" + HWSensorID;\n\n            HWEvent = bytes[5];\n\n            switch (HWEvent) {\n                case 0: HWEventDescription = \"Status code\"; break;\n                case 1: HWEventDescription = \"Error Code\"; break;\n                case 2: HWEventDescription = \"Sensor Data Payload\"; break;\n                default: HWEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Honeywell Sensor Event: \" + HWEventDescription;\n\n            // represent the honeywell sensor payload in hex\n            HWSensorPayload = Hex((bytes[6] * 256) + bytes[7]);\n\n            decoded.Message += \", Sensor Payload: 0x\" + HWSensorPayload;\n\n            break;\n\n\n        // ================  MAGNETOMETER EVENT  ==================\n        case MAGNETOMETER_EVENT:\n\n            // TBD\n\n            break;\n\n\n        // ================  VIBRATION LOW BANDWIDTH EVENT  ==================\n        case VIBRATION_LB_EVENT:\n\n            decoded.Message = \"Event: Vibration Low-Bandwidth\";\n\n            VibeEvent = bytes[2];\n\n            switch (VibeEvent) {\n                case 0: VibeEventDescription = \"Low Frequency Periodic Report\"; break;\n                case 4: VibeEventDescription = \"Low Frequency X-Axis Has Risen Above Upper Threshold\"; break;\n                case 5: VibeEventDescription = \"Low Frequency X-Axis Has Fallen Below Lower Threshold\"; break;\n                case 6: VibeEventDescription = \"Low Frequency Y-Axis Has Risen Above Upper Threshold\"; break;\n                case 7: VibeEventDescription = \"Low Frequency Y-Axis Has Fallen Below Lower Threshold\"; break;\n                case 8: VibeEventDescription = \"Low Frequency Z-Axis Has Risen Above Upper Threshold\"; break;\n                case 9: VibeEventDescription = \"Low Frequency Z-Axis Has Fallen Below Lower Threshold\"; break;\n                case 11: VibeEventDescription = \"Low Frequency Exceeded G-Force Range\"; break;\n                default: VibeEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Vibration Event: \" + VibeEventDescription;\n\n            // X, Y, and Z velocities are 16-bits\n            XVelocity = (bytes[3] * 256) + bytes[4];\n            YVelocity = (bytes[5] * 256) + bytes[6];\n            ZVelocity = (bytes[7] * 256) + bytes[8];\n\n            decoded.Message += \", X-Axis Velocity: \" + XVelocity + \" inches/second\";\n            decoded.Message += \", Y-Axis Velocity: \" + YVelocity + \" inches/second\";\n            decoded.Message += \", Z-Axis Velocity: \" + ZVelocity + \" inches/second\";\n\n            // capture sign of temp\n            VibeTemp = parseInt(bytes[9]);\n\n            decoded.Message = \", Internal Temperature: \" + VibeTemp + \"°C\";\n\n            break;\n\n        // ================  VIBRATION HIGH BANDWIDTH EVENT  ==================\n        case VIBRATION_HB_EVENT:\n\n            decoded.Message = \"Event: Vibration Low-Bandwidth\";\n\n            VibeEvent = bytes[2];\n\n            switch (VibeEvent) {\n                case 1: VibeEventDescription = \"High Frequency Periodic Report\"; break;\n                case 2: VibeEventDescription = \"High Frequency Vibration Above Upper Threshold\"; break;\n                case 3: VibeEventDescription = \"High Frequency Vibration Below Lower Threshold\"; break;\n                case 10: VibeEventDescription = \"High Frequency Exceeded G-Force Range\"; break;\n                default: VibeEventDescription = \"Undefined\"; break;\n            }\n\n            decoded.Message += \", Vibration Event: \" + VibeEventDescription;\n\n            // peak g-force\n            PeakGForce = (bytes[3] * 256) + bytes[4];\n\n            decoded.Message += \", Peak G-Force: \" + PeakGForce;\n\n            // capture sign of temp\n            VibeTemp = parseInt(bytes[5]);\n\n            decoded.Message = \", Internal Temperature: \" + VibeTemp + \"°C\";\n\n            break;\n\n\n        // ==================   DOWNLINK EVENT  ====================\n        case DOWNLINK_ACK_EVENT:\n\n            decoded.Message = \"Event: Downlink Acknowledge\";\n\n            DownlinkEvent = bytes[2];\n\n            if (DownlinkEvent == 1)\n                DownlinkEventDescription = \"Message Invalid\";\n            else\n                DownlinkEventDescription = \"Message Valid\";\n\n            decoded.Message += \", Downlink: \" + DownlinkEventDescription;\n            break;\n\n        // end of EventType Case\n    }\n\n    // add packet counter and protocol version to the end of the decode\n    decoded.Message += \", Packet Counter: \" + PacketCounter;\n    decoded.Message += \", Protocol Version: \" + ProtocolVersion;\n\n    return decoded;\n}\n\nfunction Hex(decimal) {\n    decimal = ('0' + decimal.toString(16).toUpperCase()).slice(-2);\n    return decimal;\n}\n\nfunction Convert(number, mode) {\n    switch (mode) {\n        // for EXT-TEMP and NOP\n        case 0: if (number > 127) { result = number - 256 } else { result = number }; break\n        //for ATH temp\n        case 1: if (number > 127) { result = -+(number - 128).toFixed(1) } else { result = +number.toFixed(1) }; break\n    }\n    return result;\n}\n",
         "x": 170,
-        "y": 100,
+        "y": 80,
         "wires": []
     },
     {
@@ -9055,8 +8821,8 @@
         "links": [
             "f63f19b1.1c2fd8"
         ],
-        "x": 475,
-        "y": 360,
+        "x": 495,
+        "y": 560,
         "wires": []
     },
     {
@@ -9211,107 +8977,6 @@
         ]
     },
     {
-        "id": "7b4e167f.875698",
-        "type": "inject",
-        "z": "d785d216.3d84",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 1820,
-        "wires": [
-            [
-                "82756c06.98923"
-            ]
-        ]
-    },
-    {
-        "id": "82756c06.98923",
-        "type": "function",
-        "z": "d785d216.3d84",
-        "name": "",
-        "func": "\nlet eui = '2CF7F12121000241';\nlet key = 'EA165D97D0112C9B';\n\n\nmsg.url = 'https://sensecap.seeed.cc/makerapi/device/view_device_info?nodeEui='+eui+'&deviceCode='+key;\nmsg.method = 'GET'\nmsg.payload = {};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 320,
-        "y": 1820,
-        "wires": [
-            [
-                "1c720bcb.75a804"
-            ]
-        ]
-    },
-    {
-        "id": "1c720bcb.75a804",
-        "type": "http request",
-        "z": "d785d216.3d84",
-        "name": "",
-        "method": "use",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 510,
-        "y": 1820,
-        "wires": [
-            [
-                "784501ce.99fae"
-            ]
-        ]
-    },
-    {
-        "id": "2db9495a.7adc16",
-        "type": "debug",
-        "z": "d785d216.3d84",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 810,
-        "y": 1820,
-        "wires": []
-    },
-    {
-        "id": "784501ce.99fae",
-        "type": "json",
-        "z": "d785d216.3d84",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 670,
-        "y": 1820,
-        "wires": [
-            [
-                "2db9495a.7adc16"
-            ]
-        ]
-    },
-    {
         "id": "c9be2842.da10d8",
         "type": "ttn uplink",
         "z": "ec6d74c6.c4cc58",
@@ -9323,8 +8988,8 @@
         "y": 2140,
         "wires": [
             [
-                "f6b57884.7e8bd8",
-                "ec4ea8ca.192278"
+                "ec4ea8ca.192278",
+                "fcfff78.d4acd08"
             ]
         ]
     },
@@ -9333,7 +8998,7 @@
         "type": "debug",
         "z": "ec6d74c6.c4cc58",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -9415,24 +9080,6 @@
         "wires": []
     },
     {
-        "id": "f6b57884.7e8bd8",
-        "type": "function",
-        "z": "ec6d74c6.c4cc58",
-        "name": "Loop",
-        "func": "let dev_id = msg.dev_id;\nlet hardware_serial = msg.hardware_serial;\nlet app_id = msg.app_id;\nlet counter = msg.counter;\nlet events = msg.payload.messages;\nlet influxMsg = [];\n\n/*\nTO Do...  when unknown_event is passed through to influxdb, it throws 400 bad request error.\nHow can I filter out using an array of bad events in my if statement most efficeintly?\nmap filter?\n\nlet exclusion_list = ['unknown_event', 'raw_data'];\n*/\ninfluxMsg.measurement = \"sense_cap\";\n\nfor (var i = 0 ; i < events.length; i++) {\n   if (events[i].measurementId === 4102 ) {\n        var temp_f = ((events[i].measurementValue * 9/5)+32)\n//        var temp_f = math.round((events[i].measurementValue * 9/5)+32)\n        influxMsg = [{\n            measurement: 'soil_temperature',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'soil_temperature',\n            u: 'Fah',\n            //v: temp_f.toFixed(2),\n            v: Number(temp_f.toFixed(2)),\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'soil_temperature'\n        }],}];\n        node.send(influxMsg);\n    } else {\n        if (events[i].measurementId === 4103 ) {\n        influxMsg = [{\n            measurement: 'soil_moisture',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'soil_moisture',\n            u: 'Moist',\n            v: events[i].measurementValue,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'soil_moisture'\n        }],}];\n        node.send(influxMsg);\n    } else { \n        influxMsg = [{\n            measurement: 'unknown',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'unknown',\n            u: 'unknown',\n            v: events[i].measurementValue,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'unknown'\n        }],}];\n        node.send(influxMsg);\n\n\n    }\n}}    \n\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 450,
-        "y": 2140,
-        "wires": [
-            [
-                "d1f232bf.2e32b"
-            ]
-        ]
-    },
-    {
         "id": "792fa185.2e50e",
         "type": "link in",
         "z": "d75475bd.f0fa48",
@@ -9499,7 +9146,7 @@
         "id": "3095d40.96e032c",
         "type": "inject",
         "z": "ec6d74c6.c4cc58",
-        "name": "SenseCap Test",
+        "name": "SenseCap Soil Test",
         "props": [
             {
                 "p": "dev_id",
@@ -9532,12 +9179,12 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 280,
+        "payloadType": "str",
+        "x": 290,
         "y": 2280,
         "wires": [
             [
-                "8657a89.5bf2358",
-                "f6b57884.7e8bd8"
+                "8657a89.5bf2358"
             ]
         ]
     },
@@ -9554,8 +9201,717 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
+        "x": 490,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "ec64246c.7d01b8",
+        "type": "inject",
+        "z": "ec6d74c6.c4cc58",
+        "name": "sense cap battery",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"app_id\":\"edgewood-sensecap\",\"dev_id\":\"hybiscus-lux\",\"hardware_serial\":\"2CF7F1212100000F\",\"port\":2,\"counter\":1,\"confirmed\":true,\"payload_raw\":[0,7,0,98,0,60,0,65,163],\"payload_fields\":{\"err\":0,\"messages\":[{\"battery\":98,\"type\":\"upload_battery\"},{\"interval\":3600,\"type\":\"upload_interval\"}],\"payload\":\"00070062003C0041A3\",\"valid\":true},\"metadata\":{\"time\":\"2021-01-11T23:28:27.250067801Z\",\"frequency\":904.7,\"modulation\":\"LORA\",\"data_rate\":\"SF7BW125\",\"airtime\":61696000,\"coding_rate\":\"4/5\",\"gateways\":[{\"gtw_id\":\"eui-00800000a000195a\",\"timestamp\":2026286595,\"time\":\"2021-01-11T23:28:27.198841Z\",\"channel\":4,\"rssi\":-35,\"snr\":9.8,\"rf_chain\":0,\"latitude\":45.1416,\"longitude\":-93.3749,\"altitude\":263},{\"gtw_id\":\"innatedgewood\",\"timestamp\":2832072051,\"time\":\"2021-01-11T23:58:26Z\",\"channel\":0,\"rssi\":-63,\"snr\":10,\"rf_chain\":0}]},\"payload\":{\"err\":0,\"messages\":[{\"battery\":98,\"type\":\"upload_battery\"},{\"interval\":3600,\"type\":\"upload_interval\"}],\"payload\":\"00070062003C0041A3\",\"valid\":true},\"_msgid\":\"c4e834b.4c677c8\"}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 2400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b5593e4.281de",
+        "type": "inject",
+        "z": "ec6d74c6.c4cc58",
+        "name": "report_remove_sensor",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"app_id\":\"edgewood-sensecap\",\"dev_id\":\"hybiscus-lux\",\"hardware_serial\":\"2CF7F1212100000F\",\"port\":2,\"counter\":2,\"confirmed\":true,\"payload_raw\":[1,32,1,0,0,0,0,241,17],\"payload_fields\":{\"err\":0,\"messages\":[{\"channel\":1,\"type\":\"report_remove_sensor\"}],\"payload\":\"01200100000000F111\",\"valid\":true},\"metadata\":{\"time\":\"2021-01-11T23:28:44.553442555Z\",\"frequency\":905.3,\"modulation\":\"LORA\",\"data_rate\":\"SF7BW125\",\"airtime\":56576000,\"coding_rate\":\"4/5\",\"gateways\":[{\"gtw_id\":\"innatedgewood\",\"timestamp\":2849375468,\"time\":\"2021-01-11T23:58:43Z\",\"channel\":0,\"rssi\":-52,\"snr\":9.75,\"rf_chain\":0},{\"gtw_id\":\"eui-00800000a000195a\",\"timestamp\":2043590012,\"time\":\"2021-01-11T23:28:44.50228Z\",\"channel\":7,\"rssi\":-35,\"snr\":10.8,\"rf_chain\":0,\"latitude\":45.14156,\"longitude\":-93.37495,\"altitude\":270}]},\"payload\":{\"err\":0,\"messages\":[{\"channel\":1,\"type\":\"report_remove_sensor\"}],\"payload\":\"01200100000000F111\",\"valid\":true},\"_msgid\":\"2c3f0a2b.725e46\"}",
+        "payloadType": "json",
+        "x": 300,
+        "y": 2460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fcfff78.d4acd08",
+        "type": "function",
+        "z": "ec6d74c6.c4cc58",
+        "name": "Loop",
+        "func": "let dev_id = msg.dev_id;\nlet hardware_serial = msg.hardware_serial;\nlet app_id = msg.app_id;\nlet counter = msg.counter;\nlet events = msg.payload.messages;\nlet influxMsg = [];\n\n/*\nTO Do...  when unknown_event is passed through to influxdb, it throws 400 bad request error.\nHow can I filter out using an array of bad events in my if statement most efficeintly?\nmap filter?\n\nlet exclusion_list = ['unknown_event', 'raw_data'];\n*/\ninfluxMsg.measurement = \"sense_cap\";\n\nfor (var i = 0 ; i < events.length; i++) {\n   if (events[i].measurementId === 4102 ) {\n        var temp_f = ((events[i].measurementValue * 9/5)+32)\n//        var temp_f = math.round((events[i].measurementValue * 9/5)+32)\n        influxMsg = [{\n            measurement: 'soil_temperature',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'soil_temperature',\n            u: 'Fah',\n            //v: temp_f.toFixed(2),\n            v: Number(temp_f.toFixed(2)),\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'soil_temperature'\n        }],}];\n        node.send(influxMsg);\n    } else {\n        if (events[i].measurementId === 4103 ) {\n        influxMsg = [{\n            measurement: 'soil_moisture',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'soil_moisture',\n            u: 'Moist',\n            v: events[i].measurementValue,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'soil_moisture'\n        }],}];\n        node.send(influxMsg);\n    } else {\n        if (events[i].measurementId === 4099 ) {\n        influxMsg = [{\n            measurement: 'lux',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'lux',\n            u: 'lux',\n            v: events[i].measurementValue,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'lux'\n        }],}];\n        node.send(influxMsg);\n    } else { \n        influxMsg = [{\n            measurement: 'unknown',\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: 'unknown',\n            u: 'unknown',\n            v: events[i].measurementValue,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: 'unknown'\n        }],}];\n        node.send(influxMsg);\n\n\n    }\n}}}    \n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 2140,
+        "wires": [
+            [
+                "d1f232bf.2e32b"
+            ]
+        ]
+    },
+    {
+        "id": "26b06e65.ab58b2",
+        "type": "inject",
+        "z": "ec6d74c6.c4cc58",
+        "name": "SenseCap Lux",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "app_id",
+                "v": "edgewood-sensecap",
+                "vt": "str"
+            },
+            {
+                "p": "hardware_serial",
+                "v": "2CF7F1212100000F",
+                "vt": "str"
+            },
+            {
+                "p": "dev_id",
+                "v": "hybiscus-lux",
+                "vt": "str"
+            },
+            {
+                "p": "counter",
+                "v": "7",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"err\":0,\"messages\":[{\"measurementId\":4099,\"measurementValue\":10.216,\"type\":\"report_telemetry\"}],\"payload\":\"010310E827000084F9\",\"valid\":true}",
+        "payloadType": "json",
+        "x": 280,
+        "y": 2340,
+        "wires": [
+            [
+                "8657a89.5bf2358"
+            ]
+        ]
+    },
+    {
+        "id": "274e1a60.4cb306",
+        "type": "comment",
+        "z": "ec6d74c6.c4cc58",
+        "name": "Dragino",
+        "info": "",
+        "x": 210,
+        "y": 2700,
+        "wires": []
+    },
+    {
+        "id": "4ece4c52.2fc9b4",
+        "type": "ttn uplink",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "app": "9e48d781.e8e798",
+        "dev_id": "",
+        "field": "",
+        "x": 250,
+        "y": 2860,
+        "wires": [
+            [
+                "5aea7104.a14bb",
+                "4fc88bb4.0d1614"
+            ]
+        ]
+    },
+    {
+        "id": "5aea7104.a14bb",
+        "type": "debug",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 450,
-        "y": 2280,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "134aba9.a698645",
+        "type": "inject",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "app_id",
+                "v": "app_id",
+                "vt": "msg"
+            },
+            {
+                "p": "dev_id",
+                "v": "dev_id",
+                "vt": "msg"
+            },
+            {
+                "p": "hardware_serial",
+                "v": "hardware_serial",
+                "vt": "msg"
+            },
+            {
+                "p": "counter",
+                "v": "counter",
+                "vt": "msg"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"Bat\":\"3.35 V\",\"TempC_DS18B20\":\"0.00 Â°C\",\"conduct_SOIL\":\"0 uS/cm\",\"temp_SOIL\":\"19.37 Â°C\",\"water_SOIL\":\"0.00 %\"}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 2960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ae41ebd.da686",
+        "type": "link out",
+        "z": "ec6d74c6.c4cc58",
+        "name": "draginoOut",
+        "links": [
+            "672d5550.8cf3ac"
+        ],
+        "x": 555,
+        "y": 2860,
+        "wires": []
+    },
+    {
+        "id": "4fc88bb4.0d1614",
+        "type": "function",
+        "z": "ec6d74c6.c4cc58",
+        "name": "Loop",
+        "func": "let dev_id = msg.dev_id;\nlet hardware_serial = msg.hardware_serial;\nlet app_id = msg.app_id;\nlet counter = msg.counter;\nlet events = msg.payload.events;\nlet influxMsg = {};\n\n\n/*\nTO Do...  when unknown_event is passed through to influxdb, it throws 400 bad request error.\nHow can I filter out using an array of bad events in my if statement most efficeintly?\nmap filter?\n\nlet exclusion_list = ['unknown_event', 'raw_data'];\n*/\ninfluxMsg.measurement = \"dragino\";\n//var influxMsg = [];\n\n//if (msg.payload.object.events[i].n === \"temperature\") {\n\n/*\n122719 bdb - Doing a couple things here intentionally:  \n\n1) Stripping off raw_data packets - Already caputring them in mongodb if needed.  \n2) defining influxdb measurement equal to the name of the event from the codec.\n3) defining events[i].n \n\n*/\n\n\nfor (var i = 0 ; i < events.length; i++) {\n    //if (events[i].n !=[\"raw_data\", \"unknown_event\"] ){\n    //if (events[i].n != \"raw_data\" || events[i].n != \"unknown_event\" ) {\n    if (events[i].n != \"temp_DS18B20\") {\n        influxMsg = [{\n            measurement: events[i].n,\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: events[i].n,\n            u: events[i].u,\n            v: events[i].v,\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: events[i].n\n        }],}];\n        node.send(influxMsg);\n    } else {}\n}    \n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 450,
+        "y": 2820,
+        "wires": [
+            [
+                "810b4e17.dbcc1",
+                "9ae41ebd.da686"
+            ]
+        ]
+    },
+    {
+        "id": "810b4e17.dbcc1",
+        "type": "debug",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "672d5550.8cf3ac",
+        "type": "link in",
+        "z": "d75475bd.f0fa48",
+        "name": "draginoInfluxIn",
+        "links": [
+            "9ae41ebd.da686"
+        ],
+        "x": 215,
+        "y": 2560,
+        "wires": [
+            [
+                "d200a480.6eebe8",
+                "f176a108.7a96d"
+            ]
+        ]
+    },
+    {
+        "id": "d200a480.6eebe8",
+        "type": "debug",
+        "z": "d75475bd.f0fa48",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "284ffe0f.351742",
+        "type": "link in",
+        "z": "d75475bd.f0fa48",
+        "name": "stepsInflux",
+        "links": [
+            "b0fefa1b.c9ef88"
+        ],
+        "x": 215,
+        "y": 3420,
+        "wires": [
+            [
+                "d0f6a3de.7a94e"
+            ]
+        ]
+    },
+    {
+        "id": "d0f6a3de.7a94e",
+        "type": "influxdb out",
+        "z": "d75475bd.f0fa48",
+        "influxdb": "e81e7427.232dd8",
+        "name": "",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 500,
+        "y": 3420,
+        "wires": []
+    },
+    {
+        "id": "1e23db74.0064b5",
+        "type": "comment",
+        "z": "d75475bd.f0fa48",
+        "name": "Home Assistant",
+        "info": "",
+        "x": 260,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "5d6d1e9a.927d3",
+        "type": "inject",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"app_id\":\"edgewood-dragino\",\"dev_id\":\"soil-01\",\"hardware_serial\":\"A84041EDC1828B08\",\"port\":2,\"counter\":1789,\"payload_raw\":[12,247,0,0,3,167,5,95,0,49,0],\"payload_fields\":{\"Bat\":\"3.319 V\",\"TempC_DS18B20\":\"0.00 Â°C\",\"conduct_SOIL\":\"49 uS/cm\",\"events\":[{\"n\":\"battery_voltage\",\"u\":\"V\",\"v\":3.319},{\"n\":\"temp_DS18B20\",\"u\":\"Â°C\",\"v\":\"0.00\"},{\"n\":\"soil_moisture\",\"u\":\"%\",\"v\":\"9.35\"},{\"n\":\"soil_temperature\",\"u\":\"Fah\",\"v\":\"13.75\"},{\"n\":\"soil_conductivity\",\"u\":\"°uS/cm\",\"v\":49}],\"temp_SOIL\":\"13.75 Â°C\",\"water_SOIL\":\"9.35 %\"},\"metadata\":{\"time\":\"2021-02-06T14:51:07.202975341Z\",\"frequency\":905.1,\"modulation\":\"LORA\",\"data_rate\":\"SF7BW125\",\"airtime\":61696000,\"coding_rate\":\"4/5\",\"gateways\":[{\"gtw_id\":\"eui-00800000a000195a\",\"timestamp\":1966705068,\"time\":\"\",\"channel\":6,\"rssi\":-51,\"snr\":6.8,\"rf_chain\":0,\"latitude\":45.14162,\"longitude\":-93.37475,\"altitude\":272},{\"gtw_id\":\"innatedgewood\",\"timestamp\":1986113228,\"time\":\"2021-02-06T15:23:21Z\",\"channel\":0,\"rssi\":-76,\"snr\":8.25,\"rf_chain\":0}]},\"payload\":{\"Bat\":\"3.319 V\",\"TempC_DS18B20\":\"0.00 Â°C\",\"conduct_SOIL\":\"49 uS/cm\",\"events\":[{\"n\":\"battery_voltage\",\"u\":\"V\",\"v\":3.319},{\"n\":\"temp_DS18B20\",\"u\":\"Â°C\",\"v\":\"0.00\"},{\"n\":\"soil_moisture\",\"u\":\"%\",\"v\":\"9.35\"},{\"n\":\"soil_temperature\",\"u\":\"Fah\",\"v\":\"13.75\"},{\"n\":\"soil_conductivity\",\"u\":\"°uS/cm\",\"v\":49}],\"temp_SOIL\":\"13.75 Â°C\",\"water_SOIL\":\"9.35 %\"},\"_msgid\":\"bf3172d2.2a428\"}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 3040,
+        "wires": [
+            [
+                "664c7719.34dfd8",
+                "9c9e2e91.2b719"
+            ]
+        ]
+    },
+    {
+        "id": "664c7719.34dfd8",
+        "type": "function",
+        "z": "ec6d74c6.c4cc58",
+        "name": "Loop",
+        "func": "let dev_id = msg.payload.dev_id;\nlet hardware_serial = msg.payload.hardware_serial;\nlet app_id = msg.payload.app_id;\nlet counter = msg.payload.counter;\nlet events = msg.payload.payload.events;\nlet influxMsg = {};\n\n\n/*\nTO Do...  when unknown_event is passed through to influxdb, it throws 400 bad request error.\nHow can I filter out using an array of bad events in my if statement most efficeintly?\nmap filter?\n\nlet exclusion_list = ['unknown_event', 'raw_data'];\n*/\ninfluxMsg.measurement = \"radio_bridge\";\n//var influxMsg = [];\n\n//if (msg.payload.object.events[i].n === \"temperature\") {\n\n/*\n122719 bdb - Doing a couple things here intentionally:  \n\n1) Stripping off raw_data packets - Already caputring them in mongodb if needed.  \n2) defining influxdb measurement equal to the name of the event from the codec.\n3) defining events[i].n \n\n*/\n\n\nfor (var i = 0 ; i < events.length; i++) {\n    //if (events[i].n !=[\"raw_data\", \"unknown_event\"] ){\n    //if (events[i].n != \"raw_data\" || events[i].n != \"unknown_event\" ) {\n    if (events[i].n != \"temp_DS18B20\") {\n        influxMsg = [{\n            measurement: events[i].n,\n            payload: [{\n            dev_id: dev_id,\n            dev_eui: hardware_serial,\n            msg_counter: counter,\n            n: events[i].n,\n            u: events[i].u,\n            v: Number(events[i].v),\n        },{\n            app_id: app_id,\n            device_id: dev_id,\n            event_name: events[i].n\n        }],}];\n        node.send(influxMsg);\n    } else {}\n}    \n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 3040,
+        "wires": [
+            [
+                "ca6c2c2c.67033"
+            ]
+        ]
+    },
+    {
+        "id": "ca6c2c2c.67033",
+        "type": "debug",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 3040,
+        "wires": []
+    },
+    {
+        "id": "9c9e2e91.2b719",
+        "type": "debug",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 3100,
+        "wires": []
+    },
+    {
+        "id": "ff229a34.138258",
+        "type": "inject",
+        "z": "d75475bd.f0fa48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 3800,
+        "y": 2360,
+        "wires": [
+            [
+                "cb1d8ce5.a7a4b"
+            ]
+        ]
+    },
+    {
+        "id": "cb1d8ce5.a7a4b",
+        "type": "influxdb in",
+        "z": "d75475bd.f0fa48",
+        "influxdb": "1adb25b4.af776a",
+        "name": "",
+        "query": "select * from GPS_survey where latitude != 0",
+        "rawOutput": false,
+        "precision": "n",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 4080,
+        "y": 2360,
+        "wires": [
+            [
+                "8322b82d.8491c8"
+            ]
+        ]
+    },
+    {
+        "id": "d6409b4c.faef08",
+        "type": "delay",
+        "z": "d75475bd.f0fa48",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 4510,
+        "y": 2360,
+        "wires": [
+            [
+                "7f135e03.c20b8"
+            ]
+        ]
+    },
+    {
+        "id": "8322b82d.8491c8",
+        "type": "bigsplitter",
+        "z": "d75475bd.f0fa48",
+        "name": "",
+        "property": "payload",
+        "x": 4340,
+        "y": 2360,
+        "wires": [
+            [
+                "d6409b4c.faef08"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7f135e03.c20b8",
+        "type": "mqtt out",
+        "z": "d75475bd.f0fa48",
+        "name": "Survey to GCP",
+        "topic": "survey_sweep",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "87dccc93.0a5e1",
+        "x": 4720,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "b2370270.987d3",
+        "type": "inject",
+        "z": "d75475bd.f0fa48",
+        "name": "RESET",
+        "props": [
+            {
+                "p": "reset",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 4340,
+        "y": 2460,
+        "wires": [
+            [
+                "d6409b4c.faef08"
+            ]
+        ]
+    },
+    {
+        "id": "50ba55a4.dcad2c",
+        "type": "mqtt in",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "topic": "ttn",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "87dccc93.0a5e1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "82896f0a.1ab76"
+            ]
+        ]
+    },
+    {
+        "id": "82896f0a.1ab76",
+        "type": "json",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 240,
+        "y": 460,
+        "wires": [
+            [
+                "db2a682.3f96e98"
+            ]
+        ]
+    },
+    {
+        "id": "db2a682.3f96e98",
+        "type": "debug",
+        "z": "ec6d74c6.c4cc58",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 390,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7b4e167f.875698",
+        "type": "inject",
+        "z": "d785d216.3d84",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1820,
+        "wires": [
+            [
+                "82756c06.98923"
+            ]
+        ]
+    },
+    {
+        "id": "82756c06.98923",
+        "type": "function",
+        "z": "d785d216.3d84",
+        "name": "",
+        "func": "//soil sensor\n//let eui = '2CF7F12121000241';\n//let key = 'EA165D97D0112C9B';\n\n//lux sensor\nlet eui = '2CF7F1212100000F';\nlet key = '4D92D35369E71B95';\n\n\nmsg.url = 'https://sensecap.seeed.cc/makerapi/device/view_device_info?nodeEui='+eui+'&deviceCode='+key;\nmsg.method = 'GET';\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 1820,
+        "wires": [
+            [
+                "1c720bcb.75a804"
+            ]
+        ]
+    },
+    {
+        "id": "1c720bcb.75a804",
+        "type": "http request",
+        "z": "d785d216.3d84",
+        "name": "",
+        "method": "use",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 510,
+        "y": 1820,
+        "wires": [
+            [
+                "784501ce.99fae",
+                "ad226169.ff0c4"
+            ]
+        ]
+    },
+    {
+        "id": "2db9495a.7adc16",
+        "type": "debug",
+        "z": "d785d216.3d84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "784501ce.99fae",
+        "type": "json",
+        "z": "d785d216.3d84",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 670,
+        "y": 1820,
+        "wires": [
+            [
+                "2db9495a.7adc16"
+            ]
+        ]
+    },
+    {
+        "id": "ad226169.ff0c4",
+        "type": "debug",
+        "z": "d785d216.3d84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "cd530761.8b7798",
+        "type": "comment",
+        "z": "d785d216.3d84",
+        "name": "Get SenseCAP Keys",
+        "info": "",
+        "x": 170,
+        "y": 1680,
         "wires": []
     }
 ]
